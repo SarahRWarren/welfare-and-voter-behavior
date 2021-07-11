@@ -346,6 +346,57 @@ a <- max %>%
 summary(a$Total) #descriptive stats
 table(a$Total,max$VOTE_F)
 
+#count total means tested
+a <- a %>%
+  mutate(total_means = select(., FDSTMPd, MEDAIDd, WELFAREd,
+                              EITCd, UNEMPLOYd, PUBHOUd, WICd, HEADd,
+                              COLLGRNTd, MTGDEDTd) %>% 
+           rowSums(na.rm=TRUE))
+summary(a$total_means)
+
+#count total loans
+a <- a %>%
+  mutate(total_loans = select(., STULOANSd, BUSLOANd) %>% 
+           rowSums(na.rm=TRUE))
+summary(a$total_loans)
+
+#count total entitlements
+a <- a %>%
+  mutate(total_ent = select(., SOCSECd, MEDICAREd, GOVTPENd, VETBENd,
+                            GIBILLd) %>% rowSums(na.rm=TRUE))
+summary(a$total_ent)
+
+#count total universal
+a <- a %>%
+  mutate(total_uni = select(., UNEMPLOYd, DISABITYd, WRKCOMPd) %>% 
+           rowSums(na.rm=TRUE))
+summary(a$total_uni)
+
+#make aid dummy
+a <- a %>%  
+  mutate(aid_dummy = as.numeric(Total),
+         aid_dummy = recode(Total,
+                  "0" = 0,
+                  "1" = 1,
+                  "2" = 1,
+                  "3" = 1,
+                  "4" = 1,
+                  "5" = 1,
+                  "6" = 1,
+                  "7" = 1,
+                  "8" = 1,
+                  "9" = 1,
+                  "10" = 1,
+                  '11' = 1,
+                  '12' = 1,
+                  '13' = 1)) %>%
+  glimpse()
+
+#order VOTE_F correctly
+a$VOTE_F <- factor(a$VOTE_F, levels = c("Always", "Usually", "Sometimes",
+                                        "Not at all"))
+#check our work
+#class(a$VOTE_F)
 
 max_sub <- a %>%
   select(allwt, INCOME, white, VOTE, VOTE_F, EDUC, FDSTMPd, FDSTMP, SOCSECd, SOCSECf,
@@ -354,6 +405,6 @@ max_sub <- a %>%
          WICd, WICf, HEADf, HEADd, COLLGRNTf, COLLGRNTd, STULOANSf,
          STULOANSd, VETBENf, VETBENd, WRKCOMPf, WRKCOMPd, BUSLOANf, BUSLOANd, GIBILLf,
          GIBILLd, MTGDEDTf, MTGDEDTd, PTYIDd, PTYIDf, FOLLOWPA, sex, 
-         TRUSTOFF, PEOPSAY, Total)
-
+         TRUSTOFF, PEOPSAY, total_means, total_ent, total_loans, total_uni,
+         aid_dummy, Total, year)
 write_csv(max_sub, "Data/max_sub.csv")

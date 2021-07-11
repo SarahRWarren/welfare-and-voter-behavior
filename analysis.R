@@ -4,7 +4,7 @@ library(survey)
 library(stargazer)
 library(ggpubr)
 
-max_sub <- read_csv("Data/max_sub_fin.csv")
+max_sub <- read_csv("Data/max_sub.csv")
 
 
 #DV: VOTE
@@ -65,7 +65,6 @@ ols_uw_8 <- lm(VOTE ~ total_means + PTYIDd + total_means*PTYIDd +
                data =  max_sub)
 
 
-
 #OLS weighted
 #Model 1: Vote ~ all programs + party ID
 ols_wt_1 <- lm(VOTE ~ PTYIDd +
@@ -123,6 +122,3 @@ stargazer(ols_wt_1, ols_wt_2, ols_wt_3,
 stargazer(ols_wt_4, ols_wt_5, ols_wt_6, ols_wt_7, ols_wt_8,
           title="Weighted Models 4-8", type="text", style = "apsr",
           align=TRUE, out="weighted_2.txt")
-
- cor(total_means, PEOPSAY, method = c("pearson"))
- 
