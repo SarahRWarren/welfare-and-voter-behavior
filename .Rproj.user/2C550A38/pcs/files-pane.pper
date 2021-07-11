@@ -1,0 +1,9 @@
+{
+    "path" : "~/Practicum/Data",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
