@@ -42,3 +42,41 @@ ggplot(max, aes(x=total_ent, y=..density.., fill=VOTE_F)) +
   labs(x = "Total Entitlement Programs",
        fill = "Voting Frequency",
        y = "Density")
+
+max <- max %>%
+  mutate(mean_dummy = as.character(total_means),
+         mean_dummy = recode(total_means,
+                         "0" = "N",
+                         "1" = "Y",
+                         "2" = "Y",
+                         "3" = "Y",
+                         "4" = "Y",
+                         "5" = "Y",
+                         "6" = "Y",
+                         "7" = "Y",
+                         "8" = "Y",
+                         "9" = "Y")) %>%
+  glimpse()
+                         
+one <- ggplot(max, aes(x=Total, y=VOTE_F, color=total_means)) + 
+  geom_point(alpha=.4) + 
+  geom_jitter() +
+  scale_color_gradientn(colours = rainbow(5)) +
+  theme_minimal() +
+  labs(title = "Associaton Between Aid and Voting Frequency",
+       x = "Total Aid Programs",
+       y = "Voting Frequency",
+       color = "Total Means-Tested Programs")
+ggsave("Figs/scatter_total_vote.png", plot=one)
+
+two <- ggplot(max, aes(x=total_means, y=VOTE_F, color=Total)) + 
+  geom_point(alpha=.4) + 
+  geom_jitter() +
+  scale_color_gradientn(colours = rainbow(5)) +
+  theme_minimal() +
+  labs(title = "Associaton Between Aid and Voting Frequency",
+       x = "Total Means-Tested Aid Programs",
+       y = "Voting Frequency",
+       color = "Total Aid Programs")
+
+ggsave("Figs/scatter_means_vote.png", plot=two)
