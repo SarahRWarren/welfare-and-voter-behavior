@@ -106,6 +106,7 @@ ggplot(low, aes(x=total_means, y=trust, color=PTYIDf)) + geom_point() +
        x = "Total Means-Tested Aid Programs",
        y = "Trust of Government Officials",
        color = "Party ID")
+ggsave("Figs/scatter_means_trust_low.png")
 
 ggplot(high, aes(x=total_means, y=trust, color=PTYIDf)) + geom_point() + 
   geom_jitter() + coord_flip() +
@@ -115,6 +116,7 @@ ggplot(high, aes(x=total_means, y=trust, color=PTYIDf)) + geom_point() +
        x = "Total Means-Tested Aid Programs",
        y = "Trust of Government Officials",
        color = "Party ID")
+ggsave("Figs/scatter_means_trust_high.png")
 
 ggplot(low, aes(x=total_means, y=efficacy, color=PTYIDf)) + geom_point() + 
   geom_jitter() + coord_flip() +
@@ -125,6 +127,7 @@ ggplot(low, aes(x=total_means, y=efficacy, color=PTYIDf)) + geom_point() +
        x = "Total Means-Tested Aid Programs",
        y = "Self-Efficacy",
        color = "Party ID")
+ggsave("Figs/scatter_means_efficacy_low.png")
 
 ggplot(high, aes(x=total_means, y=efficacy, color=PTYIDf)) + geom_point() + 
   geom_jitter() + coord_flip() +
@@ -135,6 +138,7 @@ ggplot(high, aes(x=total_means, y=efficacy, color=PTYIDf)) + geom_point() +
        x = "Total Means-Tested Aid Programs",
        y = "Self-Efficacy",
        color = "Party ID")
+ggsave("Figs/scatter_means_efficacy_high.png")
 
 ggplot(low, aes(x=total_uni, y=trust, color=PTYIDf)) + geom_point() + 
   geom_jitter() + coord_flip() +
@@ -144,6 +148,7 @@ ggplot(low, aes(x=total_uni, y=trust, color=PTYIDf)) + geom_point() +
        x = "Total Universal Aid Programs",
        y = "Trust of Government Officials",
        color = "Party ID")
+ggsave("Figs/scatter_uni_trust_low.png")
 
 ggplot(high, aes(x=total_uni, y=trust, color=PTYIDf)) + geom_point() + 
   geom_jitter() + coord_flip() +
@@ -153,6 +158,7 @@ ggplot(high, aes(x=total_uni, y=trust, color=PTYIDf)) + geom_point() +
        x = "Total Universal Aid Programs",
        y = "Trust of Government Officials",
        color = "Party ID")
+ggsave("Figs/scatter_uni_trust_high.png")
 
 ggplot(low, aes(x=total_uni, y=efficacy, color=PTYIDf)) + geom_point() + 
   geom_jitter() + coord_flip() +
@@ -163,6 +169,7 @@ ggplot(low, aes(x=total_uni, y=efficacy, color=PTYIDf)) + geom_point() +
        x = "Total Universal Aid Programs",
        y = "Self-Efficacy",
        color = "Party ID")
+ggsave("Figs/scatter_uni_efficacy_low.png")
 
 ggplot(high, aes(x=total_uni, y=efficacy, color=PTYIDf)) + geom_point() + 
   geom_jitter() + coord_flip() +
@@ -173,3 +180,4 @@ ggplot(high, aes(x=total_uni, y=efficacy, color=PTYIDf)) + geom_point() +
        x = "Total Universal Aid Programs",
        y = "Self-Efficacy",
        color = "Party ID")
+ggsave("Figs/scatter_uni_efficacy_high.png")
