@@ -15,6 +15,7 @@
 %\usepackage{authblk}
 \usepackage{hyperref}
 \usepackage{wrapfig}
+\usepackage{amsmath}
 %\usepackage{etoolbox}
 %
 %\AtBeginEnvironment{quote}{\singlespacing\small}
@@ -86,14 +87,85 @@ where $v\epsilon{0,1}$ is V’s choice of whether to turn out in the election, a
 	
 \textbf{Lemma A (Executive’s Distributive Policy):} In each period $t\epsilon{1,2}$, the office-holding executive, $p\epsilon{I,C}$, chooses the distributive policy: 
 
-$x_t=θ_j (1-p)+ θ_i (p)$, 
+$x_t=\theta_j (1-p)+ \theta_i (p)$, 
 
-where $θ_j$ is the opposite of the office holder’s type. Incumbent types are therefore not fully separating. 
-
-
-\textbf{Lemma B (Voter’s updated beliefs about Incumbent’s type):} After observing the Incumbent’s choice of $y_1\epsilon{0,1}$ during the first period, the Voter V’s updated belief about the Incumbent’s type is: $p_(θ_I ) (p(θ_i ) + (1-p)(θ_j ) ├ y_1 )=y_1$.
+where $\theta_j$ is the opposite of the office holder’s type. Incumbent types are therefore not fully separating. 
 
 
+\textbf{Lemma B (Voter’s updated beliefs about Incumbent’s type):}  After observing the Incumbent’s choice of $y_1 \epsilon {0,1}$ during the first period, the Voter V’s updated belief about the Incumbent’s type is: $p_(\theta I) (p(\theta_i ) + (1 - p)(\theta_j ) | y_1 )=y_1$.
+
+Given Lemma B, V expects to receive $E(y_2 | e=I)=p(\theta_i )+(1-p)(\theta_j)$ units of aid in $t=2$ if I is reelected and $E(y_2 |e=C)=E(\theta_C )=\frac{1}{2}$ units of aid if C wins the election.  V’s expected second period payoff from I’s reelection would be: $EU_V (e=I) = -(1 - x_v ) + [p(y_1 ) + (1 - p)(y_1 )]$ whereas his expected second period payoff from C’s election would be: $EU_V (e=C) = - x_V + \frac{1}{2}$. Therefore, conditional on turning out, V votes for I iff: 
+
+$EU_V (e=I) \geq EU_V (e=C) \Rightarrow = -(1 - x_V ) + [p(y_1 ) + (1 - p)(y_1 )] \geq - x_V + \frac{1}{2} \Rightarrow x_V \geq \frac{3}{4} + \frac{p(y_1 - y_-1 ) + y_-1}{2}$
+
+When $x_V$ is above this threshold, V prefers that the Incumbent win the election, so V’s total expected payoff from voting would be:
+$ EU_V (v=1 | x_V \geq \frac{3}{4} + \frac{p(y_1 - y_-1 ) + y_-1}{2}) = - (1 - x_V ) + y_1 - c$
+
+When $x_V$ is below the threshold, V prefers that the Challenger win the election, so V’s total expected payoff from voting would be:
+$ EU_V (v=1 | x_V \geq \frac{3}{4} + \frac{p(y_1 - y_-1 ) + y_-1}{2}) = -x_V + \frac{1}{2} - c$
+
+In both cases, V’s total combined expected payoff from not voting is:
+$ EU_V (v=0) = \frac{EU_V (e=I)}{2} + \frac{EU_V (e=C)}{2} + \frac{- (1 - x_V ) + y_1}{2} + \frac{-x_V + \frac{1}{2}}{2} = \frac{y_1}{2} - \frac{1}{4}$
+
+Hence, in equilibrium, V turns out to vote iff: $EU_V (v=1) \geq EU_V (v=0) \Rightarrow c \leq \bar{c}$ where:
+
+\begin{equation}
+\bar{c} =
+\begin{cases}
+\frac{-y_1}{2} - x_V + \frac{3}{4} & if x_V < \frac{1}{4}\\    
+x_V (2y_1 - 1) + \frac{3}{4}     & if \frac{1}{4} \leq x_V < \frac{3}{4}  \\
+\frac{y_1}{2} + x_V - \frac{3}{4}     & if x_V \geq \frac{3}{4}  \\
+\end{cases}
+\end{equation}
+
+\textbf{Lemma C: (V’s Turnout and Vote Choice):} Let $Q_(y_1 )(x_V )$ denote the probability of turnout for a voter with ideal point $x_V$ and who receives $y_1 \epsilon {0,1}$ of aid during Period 1. V’s turnout choice in the election is:
+
+\begin{equation}
+Q_(y_1 )(x_V ) =
+\begin{cases}
+\frac{-y_1}{2} - x_V + \frac{3}{4} & if x_V < \frac{1}{4}\\    
+x_V (2y_1 - 1) + \frac{3}{4}     & if \frac{1}{4} \leq x_V < \frac{3}{4}  \\
+\frac{y_1}{2} + x_V - \frac{3}{4}     & if x_V \geq \frac{3}{4}  \\
+\end{cases}
+\end{equation}
+
+Therefore, given turning out, V’s vote in the election is:
+\begin{equation}
+s =
+\begin{cases}
+I, & if x_V \geq \frac{3}{4} + \frac{p(y_1 - y_-1) + y_-1}{2} \\    
+C,     & otherwise  \\
+\end{cases}
+\end{equation}
+where $y_-1$ is the aid amount not delivered in the period (i.e. if $1$ unit of aid was delivered, $y_-1 = 0$.)
+
+Given this, we can calculate the \emph{change in turnout probability} from receiving one unit of aid in $t_1$. Put differently, the effect of receiving $y_1 = 1$ is:
+\begin{equation}
+Q_1 (x_V ) - Q_0 (x_V )=
+\begin{cases}
+\frac{-1}{2} & if x_V < \frac{1}{4}\\    
+2x_V - 1 & if \frac{1}{4} \leq x_V < \frac{3}{4}  \\
+\frac{1}{2} & if x_V \geq \frac{3}{4}  \\
+\end{cases}
+\end{equation}
+
+In other words, delivering aid to ideologically distant voters $(x_V < \frac{1}{2})$ strictly decreases their probability of turning out, while delivering aid to ideologically proximate voters $(x_V > \frac{1}{2})$  strictly increases their probability of turning out. Additionally, conditional upon turnout, delivering aid strictly increases the likelihood of voting for the incumbent. The delivery of aid during period one increases V’s expected payoff from having the incumbent reelected relative to the probability that the aid distribution was an informative signal. The increased expected payoff drives my main prediction that the delivery of aid in period one increases a right-wing voter's probability of turnout.
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{Figs/equilibrium.png}
+	\caption{Figure 1: Change in Turnout Probability Given Aid}
+	\label{Figure 1: Change in Turnout Probability Given Aid}
+\end{figure}
+
+From Lemmas A, B, and C, we can derive the simple prediction that those who favor the incumbent \emph{a priori} credit the Incumbent with the positive experience of aid and, therefore, turnout to vote for him or her. Those who do not favor the incumbent \emph{a priori}, rather than change their vote choice, are simply less motivated to turnout to oust the Incumbent. Distant voters, therefore, should be less likely to turnout to vote at all. Put differently, receiving aid in $t_1$ causes a relatively larger increase in a right-wing voter’s turnout probability but a relatively smaller decrease in a left-wing voter’s turnout probability, given $p > \frac{1}{2}$. 
+
+\emph{H1(a): For a left-wing voter $(x_V < \frac{1}{2})$, receiving distributive aid in period 1 causes a strict decrease in the probability of voter turnout.\\
+H1(b): For a right-wing voter $(x_V > \frac{1}{2})$, receiving distributive aid in period 1 causes a strict increase in the probability of voter turnout.}
+
+%\section{Research Design}
+%\section{Analysis}
+%\section{Discussion}
+%\section{Conclusion}
 
 
 \end{document}

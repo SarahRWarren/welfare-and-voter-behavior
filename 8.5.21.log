@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.14)  5 AUG 2021 08:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.4.14)  6 AUG 2021 06:09
 entering extended mode
 **./8.5.21.tex
 (8.5.21.tex
@@ -376,22 +376,22 @@ File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 ) (8.5.21.aux)
 \openout1 = `8.5.21.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -450,7 +450,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
 \AtBeginShipoutBox=\box54
-Package hyperref Info: Link coloring OFF on input line 23.
+Package hyperref Info: Link coloring OFF on input line 24.
 
 ("C:\Users\Oscar Wilde\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nam
 eref.sty"
@@ -466,15 +466,15 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count283
 )
-LaTeX Info: Redefining \ref on input line 23.
-LaTeX Info: Redefining \pageref on input line 23.
-LaTeX Info: Redefining \nameref on input line 23.
+LaTeX Info: Redefining \ref on input line 24.
+LaTeX Info: Redefining \pageref on input line 24.
+LaTeX Info: Redefining \nameref on input line 24.
  (8.5.21.out) (8.5.21.out)
 \@outlinefile=\write3
 \openout3 = `8.5.21.out'.
 
 
-Overfull \hbox (0.33177pt too wide) in paragraph at lines 38--39
+Overfull \hbox (0.33177pt too wide) in paragraph at lines 39--40
 \OT1/cmr/m/n/12 ior|prospective vot-ing (Conover, Feld-man, and Knight 1987), r
 et-ro-spec-tive vot-ing (Conover,
  []
@@ -485,52 +485,67 @@ et-ro-spec-tive vot-ing (Conover,
 {C:/Users/Oscar Wilde/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 [2]
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 52.
+LaTeX Warning: Command \textendash invalid in math mode on input line 53.
 
 
-Overfull \hbox (0.67072pt too wide) in paragraph at lines 52--53
+Overfull \hbox (0.67072pt too wide) in paragraph at lines 53--54
 []\OT1/cmr/m/it/12 Player Types: \OT1/cmr/m/n/12 Na-ture se-lects the politi-ci
 ans' types, $\OML/cmm/m/it/12 []; [][]$\OT1/cmr/m/n/12 , with prob-a-bil-i-t
 ies: $\OML/cmm/m/it/12 Pr\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 [] \OT1/cmr/m/n/12 
 =
  []
 
-[3] [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 86.
- [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
+[3] [4] [5] [6]
+<Figs/equilibrium.png, id=65, 336.75812pt x 222.33063pt>
+File: Figs/equilibrium.png Graphic file (type png)
+<use Figs/equilibrium.png>
+Package pdftex.def Info: Figs/equilibrium.png  used on input line 155.
+(pdftex.def)             Requested size: 469.75502pt x 310.1412pt.
+ [7] [8 <./Figs/equilibrium.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 171.
+ [9]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 171.
  (8.5.21.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 86.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 171.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 171.
 Package rerunfilecheck Info: File `8.5.21.out' has not changed.
-(rerunfilecheck)             Checksum: EBF56016E05617F4C675DEF6B3AF0D96;119.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 86.
+(rerunfilecheck)             Checksum: 59CEBB2EF163563DA85B05FAB2AC0523;188.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 171.
  ) 
 Here is how much of TeX's memory you used:
- 7173 strings out of 480930
- 109241 string characters out of 2896945
- 382394 words of memory out of 3000000
- 22898 multiletter control sequences out of 15000+200000
- 540637 words of font info for 52 fonts, out of 3000000 for 9000
+ 7198 strings out of 480930
+ 109529 string characters out of 2896945
+ 386465 words of memory out of 3000000
+ 22909 multiletter control sequences out of 15000+200000
+ 541251 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,8n,34p,1157b,391s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Oscar Wilde\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/d
 pi600\tcrm1200.pk><C:/Users/Oscar Wilde/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Oscar Wilde/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Oscar Wilde/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Us
-ers/Oscar Wilde/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr12.pfb><C:/Users/Oscar Wilde/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr8.pfb><C:/Users/Oscar Wilde/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Oscar Wilde/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/
-Oscar Wilde/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-ssi17.pfb><C:/Users/Oscar Wilde/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb><C:/Users/Oscar Wilde/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on 8.5.21.pdf (5 pages, 127226 bytes).
+/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Oscar Wilde/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Oscar Wilde/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
+Users/Oscar Wilde/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmmi6.pfb><C:/Users/Oscar Wilde/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Oscar Wilde/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Oscar Wilde/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/O
+scar Wilde/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+6.pfb><C:/Users/Oscar Wilde/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr8.pfb><C:/Users/Oscar Wilde/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/Oscar Wilde/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/Oscar Wi
+lde/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.p
+fb><C:/Users/Oscar Wilde/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmssi17.pfb><C:/Users/Oscar Wilde/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Oscar Wilde/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Oscar Wil
+de/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+C:/Users/Oscar Wilde/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmti12.pfb>
+Output written on 8.5.21.pdf (9 pages, 218199 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 14 named destinations out of 1000 (max. 500000)
- 17 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 149 PDF objects out of 1000 (max. 8388607)
+ 24 named destinations out of 1000 (max. 500000)
+ 30 words of extra memory for PDF output out of 10000 (max. 10000000)
 
