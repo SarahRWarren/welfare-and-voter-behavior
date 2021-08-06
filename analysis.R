@@ -108,22 +108,6 @@ ols_wt_8 <- lm(VOTE ~ total_loans + total_uni + total_ent + total_means + PTYIDd
                  white + EDUC + sex + FOLLOWPA + TRUSTOFF + PEOPSAY,
                weights = allwt, data =  max_sub)
 
-stargazer(ols_uw_1, ols_uw_2, ols_uw_3, ols_uw_4,
-          title="Unweighted Models 1-4", type= "text", style = "apsr",
-          align=TRUE, out="unweighted_1.txt")
-          
-stargazer(ols_uw_5, ols_uw_6, ols_uw_7, ols_uw_8,
-          title="Unweighted Models 5-8", type="text", style = "apsr",
-          align=TRUE, out="unweighted_2.txt")
-
-stargazer(ols_wt_1, ols_wt_2, ols_wt_3,
-          title="Weighted Models 1-3", type="text", style = "apsr",
-          align=TRUE, out="weighted_1.txt")
-
-stargazer(ols_wt_4, ols_wt_5, ols_wt_6, ols_wt_7, ols_wt_8,
-          title="Weighted Models 4-8", type="text", style = "apsr",
-          align=TRUE, out="weighted_2.txt")
-
 
 ##ROBUST to: Dichotomous measure of Turnout
 ##high/low turnout groups
@@ -219,3 +203,30 @@ ord7 <- polr(VOTE ~ total_uni + PTYIDd + total_uni*PTYIDd +
 ord8 <- polr(VOTE ~ total_means + PTYIDd + total_means*PTYIDd +
                  white + EDUC + sex + FOLLOWPA + TRUSTOFF + PEOPSAY,
                weights = allwt, data =  max_sub, Hess=TRUE)
+
+
+##TABLES
+stargazer(ols_uw_1, ols_uw_2, ols_uw_3, ols_uw_4,
+          title="Unweighted Models 1-4", type="latex", style = "apsr",
+          align=TRUE, out="unweighted_1.tex")
+
+stargazer(ols_uw_5, ols_uw_6, ols_uw_7, ols_uw_8,
+          title="Unweighted Models 5-8", type="latex", style = "apsr",
+          align=TRUE, out="unweighted_2.tex")
+
+stargazer(ols_wt_1, hilo1, ord1, ols_wt_2, hilo2, ord2,
+          title="Weighted Models 1-3", type="latex", style = "apsr",
+          align=TRUE, out="weighted_1.tex")
+
+stargazer(ols_wt_3, hilo3, ord3, ols_wt_4, hilo4, ord4,
+          title="Weighted Models 1-3", type="latex", style = "apsr",
+          align=TRUE, out="weighted_2.tex")
+
+stargazer( ols_wt_5, hilo5, ord5, ols_wt_6, hilo6, ord6,
+          title="Weighted Models 4-6", type="latex", style = "apsr",
+          align=TRUE, out="weighted_3.tex")
+
+stargazer(ols_wt_7, hilo7, ord7, ols_wt_8, hilo8, ord8,
+          title="Weighted Models 7-8", type="latex", style = "apsr",
+          align=TRUE, out="weighted_4.tex")
+
