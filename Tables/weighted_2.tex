@@ -1,52 +1,48 @@
 
 % Table created by stargazer v.5.2.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-% Date and time: Wed, Jun 02, 2021 - 7:21:23 PM
+% Date and time: Fri, Aug 06, 2021 - 8:21:36 AM
 % Requires LaTeX packages: dcolumn 
 \begin{table}[!htbp] \centering 
-  \caption{Weighted Models 5-8} 
+  \caption{Weighted Models 1-3} 
   \label{} 
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 \\[-1.8ex]\hline \\[-1.8ex] 
-\\[-1.8ex] & \multicolumn{4}{c}{VOTE} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{VOTE\_D} & \multicolumn{1}{c}{VOTE} & \multicolumn{1}{c}{VOTE\_D} & \multicolumn{1}{c}{VOTE} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{logistic} & \multicolumn{1}{c}{ordered} & \multicolumn{1}{c}{logistic} & \multicolumn{1}{c}{ordered} \\ 
+ & \multicolumn{1}{c}{} & \multicolumn{1}{c}{logistic} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{logistic} \\ 
 \\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
 \hline \\[-1.8ex] 
- total\_loans & 0.105 &  &  &  \\ 
-  & (0.105) &  &  &  \\ 
-  total\_ent &  & -0.065 &  &  \\ 
-  &  & (0.053) &  &  \\ 
-  total\_uni &  &  & -0.027 &  \\ 
-  &  &  & (0.085) &  \\ 
-  total\_means &  &  &  & -0.038 \\ 
-  &  &  &  & (0.036) \\ 
-  PTYID & 0.037 & 0.042 & 0.026 & -0.012 \\ 
-  & (0.026) & (0.026) & (0.026) & (0.033) \\ 
-  race2 & 0.008 & 0.011 & 0.012 & 0.013 \\ 
-  & (0.024) & (0.024) & (0.024) & (0.024) \\ 
-  EDUC & -0.071^{***} & -0.060^{**} & -0.059^{**} & -0.060^{**} \\ 
-  & (0.025) & (0.024) & (0.024) & (0.024) \\ 
-  sex & -0.003 & -0.031 & -0.001 & -0.012 \\ 
-  & (0.050) & (0.050) & (0.050) & (0.050) \\ 
-  FOLLOWPA & 0.251^{***} & 0.239^{***} & 0.251^{***} & 0.247^{***} \\ 
-  & (0.029) & (0.029) & (0.029) & (0.029) \\ 
-  TRUSTOFF & -0.102^{**} & -0.109^{***} & -0.109^{***} & -0.112^{***} \\ 
-  & (0.040) & (0.040) & (0.040) & (0.040) \\ 
-  PEOPSAY & -0.021 & -0.012 & -0.007 & -0.020 \\ 
-  & (0.043) & (0.043) & (0.043) & (0.043) \\ 
-  total\_loans:PTYID & -0.005 &  &  &  \\ 
-  & (0.039) &  &  &  \\ 
-  total\_ent:PTYID &  & -0.004 &  &  \\ 
-  &  & (0.021) &  &  \\ 
-  total\_uni:PTYID &  &  & 0.027 &  \\ 
-  &  &  & (0.035) &  \\ 
-  total\_means:PTYID &  &  &  & 0.028^{*} \\ 
-  &  &  &  & (0.014) \\ 
-  Constant & 1.339^{***} & 1.438^{***} & 1.332^{***} & 1.445^{***} \\ 
-  & (0.156) & (0.157) & (0.157) & (0.165) \\ 
- N & \multicolumn{1}{c}{850} & \multicolumn{1}{c}{850} & \multicolumn{1}{c}{850} & \multicolumn{1}{c}{850} \\ 
-R$^{2}$ & \multicolumn{1}{c}{0.126} & \multicolumn{1}{c}{0.133} & \multicolumn{1}{c}{0.123} & \multicolumn{1}{c}{0.128} \\ 
-Adjusted R$^{2}$ & \multicolumn{1}{c}{0.116} & \multicolumn{1}{c}{0.123} & \multicolumn{1}{c}{0.114} & \multicolumn{1}{c}{0.118} \\ 
-Residual Std. Error (df = 840) & \multicolumn{1}{c}{0.727} & \multicolumn{1}{c}{0.724} & \multicolumn{1}{c}{0.728} & \multicolumn{1}{c}{0.726} \\ 
-F Statistic (df = 9; 840) & \multicolumn{1}{c}{13.405$^{***}$} & \multicolumn{1}{c}{14.278$^{***}$} & \multicolumn{1}{c}{13.146$^{***}$} & \multicolumn{1}{c}{13.676$^{***}$} \\ 
+ aid\_dummy & 2.755^{***} & 1.058^{*} &  &  \\ 
+  & (0.819) & (0.619) &  &  \\ 
+  total\_loans &  &  & 0.744^{*} & -0.117 \\ 
+  &  &  & (0.446) & (0.220) \\ 
+  total\_uni &  &  & 0.488 & 0.212 \\ 
+  &  &  & (0.374) & (0.193) \\ 
+  total\_ent &  &  & 0.319 & 0.138 \\ 
+  &  &  & (0.232) & (0.115) \\ 
+  total\_means &  &  & -0.049 & -0.101 \\ 
+  &  &  & (0.149) & (0.080) \\ 
+  PTYIDd & 16.727 & 1.323 & 0.291 & -0.007 \\ 
+  & (819.837) & (0.955) & (0.393) & (0.213) \\ 
+  white & -0.016 & 0.070 & 0.356 & 0.092 \\ 
+  & (0.428) & (0.250) & (0.415) & (0.244) \\ 
+  EDUC & -0.004 & -0.052 & 0.042 & 0.013 \\ 
+  & (0.181) & (0.099) & (0.186) & (0.104) \\ 
+  sex & -0.222 & -0.264 & 0.131 & -0.118 \\ 
+  & (0.372) & (0.212) & (0.374) & (0.217) \\ 
+  FOLLOWPA & -0.577^{***} & -0.764^{***} & -0.574^{***} & -0.772^{***} \\ 
+  & (0.179) & (0.120) & (0.182) & (0.120) \\ 
+  TRUSTOFF & 0.510 & 0.351^{*} & 0.738^{**} & 0.325 \\ 
+  & (0.371) & (0.211) & (0.374) & (0.215) \\ 
+  PEOPSAY & 1.342^{***} & 0.183 & 1.153^{***} & 0.139 \\ 
+  & (0.398) & (0.218) & (0.381) & (0.219) \\ 
+  aid\_dummy:PTYIDd & -16.630 & -1.362 &  &  \\ 
+  & (819.837) & (0.983) &  &  \\ 
+  Constant & -1.860 &  & -0.422 &  \\ 
+  & (1.359) &  & (1.223) &  \\ 
+ N & \multicolumn{1}{c}{458} & \multicolumn{1}{c}{480} & \multicolumn{1}{c}{458} & \multicolumn{1}{c}{480} \\ 
+Log Likelihood & \multicolumn{1}{c}{-128.697} &  & \multicolumn{1}{c}{-130.974} &  \\ 
+AIC & \multicolumn{1}{c}{277.395} &  & \multicolumn{1}{c}{285.949} &  \\ 
 \hline \\[-1.8ex] 
 \multicolumn{5}{l}{$^{*}$p $<$ .1; $^{**}$p $<$ .05; $^{***}$p $<$ .01} \\ 
 \end{tabular} 

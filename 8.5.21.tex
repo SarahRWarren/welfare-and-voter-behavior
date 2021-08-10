@@ -16,6 +16,7 @@
 \usepackage{hyperref}
 \usepackage{wrapfig}
 \usepackage{amsmath}
+\usepackage{adjustbox}
 %\usepackage{etoolbox}
 %
 %\AtBeginEnvironment{quote}{\singlespacing\small}
@@ -33,19 +34,24 @@
 %\clearpage
 %\setstretch{1}
 
+
+%%QUOTE ABOUT VOTES AND DEMOCRACY
+
 \section{Introduction}
-Voter participation is among the most widely studied components of political behavior. Scholars have long considered the individual, social, and systemic factors that influence the decision to show up to the polls on election day. It is well-established and generally accepted that voters with higher education and income turnout more often than their lower-resourced counterparts (Wolfinger and Rosenstone 1980).  Despite its ubiquity, however, few scholars have tried to reconcile the established reality that aid-receiving voters turnout in relatively low numbers with dominant theories of voter behavior.
+The popular vote is one of the most important aspect of democracy. It is the means by which voters attain representation (SOURCE) and then hold representatives accountable (SOURCE). But who is represented and who holds representatives accountable depends on who votes. It is well-established that voters with higher education and income turnout more often than their lower-resourced counterparts (Wolfinger and Rosenstone 1980). Public assistance recipients are an especially quiescent voting bloc (Verba, Schlozman, and Brady 1995). 47\% of eligible adults with family incomes of less than \$20,000 a year voted in 2012 and just 25\% voted in the 2010 midterm elections. Consequently, voter participation is among the most widely studied components of political behavior. Scholars have long considered the individual, social, and systemic factors that influence the decision to show up to the polls on election day. 
 
-Seymour Lipset (1960) argued that one's decision to vote depends upon the perceived “relevance of government policies to the individual.” Modern theories of voting behavior—prospective voting (Conover, Feldman, and Knight 1987), retrospective voting (Conover, Feldman, and Knight 1986), sociotropic voting (Hansford and Gomez 2015), and others (Dowding 2005; Fedderson and Sandroni 2006)—still rely on Lipset’s (1960) summation of the boundedly rational political actor: voters turnout based on the perceived relevance of policies to their lives. Thus, what matters is not simply the objective relevance of government to the voter, but the extent to which government agents can effectively claim credit (or avoid blame) for governmental action that citizens perceive to affect them. Presumably, then, those who stand to benefit the most from generous government policies (and, conversely, be most harmed by social spending cuts) should be likely to vote, particularly if they participate in aid programs that assist in feeding their families, provide health insurance, and meet other immediate, tangible needs.
+Seymour Lipset (1960) argued that one's decision to vote depends upon the perceived “relevance of government policies to the individual.” Modern theories of voting behavior still rely on Lipset’s (1960) summation of the boundedly rational political actor: voters turnout based on the perceived relevance of politics to their own lives (Conover, Feldman, and Knight 1986; Conover, Feldman, and Knight 1987; Dowding 2005; Fedderson and Sandroni 2006; Hansford and Gomez 2015). Thus, what matters is not simply the objective relevance of government to the voter, but the extent to which government agents can effectively claim credit (or avoid blame) for governmental action that citizens perceive to affect them. Presumably, then, those who stand to benefit the most from generous government policies (and, conversely, be most harmed by social spending cuts) should be likely to vote. Unlike government redistribution in the form of roads, fire and police protection, social welfare benefits are often targeted, direct money-transfers from a federal or state office to an individual or household in need. Public aid beneficiaries have an unusually visible stake in election and policy outcomes, particularly if they participate in aid programs that assist in feeding their families, providing health insurance, and meeting other immediate, tangible needs. In this case, public funding priorities have a direct impact on the quality and quantity of food, healthcare, and spending money these households receive.
 
-Welfare recipients have an unusually visible stake in elections and policy outcomes. Given such strong personal incentives, one might expect welfare recipients to be more politically active than other citizens (Lipset 1960; Olson 1965); however, this does not appear to be the case in the United States. In fact, public assistance recipients are an especially quiescent voting bloc (Verba, Schlozman, and Brady 1995). 47\% of eligible adults with family incomes of less than \$20,000 a year voted in 2012 and just 25\% voted in the 2010 midterm elections. Additionally, participants in means-tested federal aid programs—those for whom the actions of those in office are most relevant to their day to day lives—are less likely to vote than those who participate in universal, or non-means-tested, aid programs (Mettler and Stonecash 2008).  
+Given such strong personal incentives, one might expect welfare recipients to be more politically active than other citizens (Lipset 1960; Olson 1965); however, this does not appear to be the case in the United States. As political scientists, how can we reconcile our theoretical predictions with this empirical reality? I build on existing theories of attribution and voter behavior to model a novel theoretical explanation for the voting behavior of American welfare recipients. I empirically evaluate the implications of my model using data from the Maxwell Poll from 2004-2007. Using a novel measurement technique to classify aid-types, I find that entitlements are associated with an increase in self-reported turnout in elections while government subsidized loans are associated with a decrease in self-reported turnout. Importantly, the effect of means-tested aid on government turnout appears to be less straightforward than previous work suggests.
 
-As political scientists, how can we reconcile our theoretical predictions with this counterintuitive behavior? I build on existing theories of attribution and voter behavior to model a novel theoretical explanation for the voting behavior of American welfare recipients. I empirically evaluate the implications of my model using data from the Maxwell Poll from 2004-2007. Using a novel measurement technique to classify aid-types, I find that entitlements are associated with an increase in self-reported turnout in elections while government subsidized loans are associated with a decrease in self-reported turnout. Importantly, the effect of means-tested aid on government turnout appears to be less straightforward than previous work suggests.
+I use a dynamic Bayesian model with incomplete information to highlight partisanship as a mechanism which can cause variation in turnout among aid recipients. Having done so, I develop hypotheses which will hold if this model is useful as a picture of the world (CITE JIM AND RUBENSTEIN). I find ___. I then briefly present an expanded version of the model and test the effects of aid on self-reported self-efficacy. Importantly, I find ___. The rest of the paper proceeds as follows. Section 1 reviews the relevant literature and dominant theories of voter attribution and redistributive politics in the United States. Section 2 outlines the model and present its equilibrium outcome. Section 3 presents my empirical hypotheses, data, and empirical analysis. Section 4 presents a brief discussion of the expanded model and an empirical test of the self efficacy mechanism. Section 5 concludes and discusses directions for future research.
 
-%[EXPLANATION OF THE FLOW OF THE PAPER – WRITE LAST]%
+\section{The Quiescence of Aid Recipients}
+There are two widely accepted reasons for the quiescence of aid-receiving voters in the United States. First, because aid recipients are often less well educated and less well off financially, the boost to their participation by their larger interest in government activity is insufficient to overcome their other resource deficits (Verba, Scholzman, and Brady 1995, 411). Second, aid institutions in the United States diminish the perceived self-efficacy of aid-recipients, making them less likely to turnout to vote. Pateman (1970) and Piven and Cloward (1971) highlight the educative effects of institutions, which shape the behavior of aid participants. Soss (1999) and others (Madsen 1986; Mettler and Stonecash 2008) argue that institutions like means-testing and constant eligibility evaluation by bureaucrats may teach participants that government is not responsive to them. Participants carry a sense of low self-efficacy to other political processes, including as voting, leading to decreased turnout. Other scholars, however, find that aid intended for the very poor can have a very positive effect on political participation (SOURCES).
 
-%\section{The Quiescence of Aid Recipients}
-%%revising
+Some models (Fiorina 1981, 5; Kinder and Kiewiet 1981) suggest that voters choose presidential candidates based on their own financial circumstances, via “pocketbook voting.” In these attributive models, voters take stock of factors such as their personal employment, their health benefits, their income, and other changes to their personal financial situation. Based on these, voters either blame the incumbent for their bad circumstances or credit him with their good circumstances. Other models (Goren 1997; Gomez and Wilson 2001) suggest that voters are sociotropic, or base their economic attributions on national economic factors, such as the GDP, the stock market, inflation, and the unemployment rate. In these models, voters retrospectively blame the incumbent president for rising unemployment and inflation, a falling GDP, and rising taxes.  However, economic voters may be heterogeneous in their response to information. Weatherford (1978) finds that pocketbook responses vary by social class. Conover, Feldman, and Knight  (1986) find that voters differ in the quantity and quality of information they have on the national economy and how they apply it. CFK find that the accuracy of retrospective assessments depends jointly on the availability of information about the issue, the salience of the issue, and the sensitivity of the issue to specific knowledge. Similarly, Hansford and Gomez (2015) find that economic evaluations are colored by appraisals of the incumbent and thus do not operate as an exogenous influence on votes. Thus, the decision to vote and for whom to vote as the joint product of the information about the costs and benefits of voting and how that information is processed. Differences in “processing” most often manifest through partisanship, education, or political sophistication (Gomez and Wilson 2001; Arceneaux 2006; Chen 2013). 
+
+These conventional models of voter behavior and motivation speak to the processes which undergird all voter decisions, but social welfare (1) can impose a unique set of costs on participants through means-testing, (2) can confer a uniquely salient set of benefits through cash transfers or subsidization, (3) and can mitigate the type and salience of economic information recipients process. My novel theory of aid-related voting behavior addresses these contradictory literatures by incorporating the heterogeneous effects for partisanship into the model, as well as allowing the cost of voting to vary across voters.
 
 \section{A Formal Model of Aid and Attribution}
 \emph{Players:} Two politicians, an incumbent (I) and a challenger (C), who have different ideal points $(x_I=1, x_C=0)$. A voter (V) whose ideal point $x_V \epsilon [0,1]$ lies somewhere between $x_I$ and $x_C.$
@@ -159,13 +165,194 @@ In other words, delivering aid to ideologically distant voters $(x_V < \frac{1}{
 
 From Lemmas A, B, and C, we can derive the simple prediction that those who favor the incumbent \emph{a priori} credit the Incumbent with the positive experience of aid and, therefore, turnout to vote for him or her. Those who do not favor the incumbent \emph{a priori}, rather than change their vote choice, are simply less motivated to turnout to oust the Incumbent. Distant voters, therefore, should be less likely to turnout to vote at all. Put differently, receiving aid in $t_1$ causes a relatively larger increase in a right-wing voter’s turnout probability but a relatively smaller decrease in a left-wing voter’s turnout probability, given $p > \frac{1}{2}$. 
 
-\emph{H1(a): For a left-wing voter $(x_V < \frac{1}{2})$, receiving distributive aid in period 1 causes a strict decrease in the probability of voter turnout.\\
-H1(b): For a right-wing voter $(x_V > \frac{1}{2})$, receiving distributive aid in period 1 causes a strict increase in the probability of voter turnout.}
+\emph{H1(a): For a left-wing voter $(x_V < \frac{1}{2})$, receiving distributive aid in period 1 causes a strict decrease in the probability of voter turnout.}
+
+\emph{H1(b): For a right-wing voter $(x_V > \frac{1}{2})$, receiving distributive aid in period 1 causes a strict increase in the probability of voter turnout.}
 
 %\section{Research Design}
+
+
 %\section{Analysis}
+
+
+%%Model 2: Vote ~ all programs + controls (race, income, education, sex, followpa, trustoff, peopsay)
+\newgeometry{left=3cm,bottom=0.5cm,right=3cm,top=0.5cm}
+\begin{singlespace}
+	\begin{table}[!htbp] \centering 
+		\small
+		\begin{adjustbox}{width=.6\textwidth}
+	\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} } 
+		\\[-1.8ex]\hline \\[-1.8ex] 
+		\\[-1.8ex] & \multicolumn{1}{c}{Vote Frequency Dummy} & \multicolumn{1}{c}{Vote Frequency (1-4)} \\ 
+		\\[-1.8ex] & \multicolumn{1}{c}{Binary Logit} & \multicolumn{1}{c}{Ordered Logit} \\ 
+		\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)}\\ 
+		\hline \\[-1.8ex] 
+		Party ID & 0.499 & 0.036 \\ 
+		& (0.492) & (0.228) \\ 
+		White & 0.092 & 0.100 \\ 
+		& (0.550) & (0.269) \\ 
+		Education & -0.104 & 0.011 \\ 
+		& (0.233) & (0.113) \\ 
+		Female & -0.143 & -0.018 \\ 
+		& (0.454) & (0.232) \\ 
+		Follow Public Affairs & -0.992^{***} & -0.814^{***} \\ 
+		& (0.240) & (0.127) \\ 
+		Trust of Gov & 1.570^{***} & 0.397^{*} \\ 
+		& (0.469) & (0.225) \\ 
+		Self-Efficacy & 1.333^{***} & 0.106 \\ 
+		& (0.482) & (0.236) \\ 
+		SNAP & -1.084 & 0.177 \\ 
+		& (0.945) & (0.572) \\ 
+		Social Security & 4.143^{***} & 0.500 \\ 
+		& (1.522) & (0.497) \\ 
+		Medicaid & -1.519^{*} & -0.623 \\ 
+		& (0.889) & (0.471) \\ 
+		Medicare & -2.591^{**} & -0.387 \\ 
+		& (1.231) & (0.539) \\ 
+		Welfare & -0.599 & -0.038 \\ 
+		& (0.971) & (0.531) \\ 
+		EITC & -0.292 & -0.496^{**} \\ 
+		& (0.514) & (0.245) \\ 
+		Unemployment & 1.137^{*} & 0.205 \\ 
+		& (0.637) & (0.261) \\ 
+		Pension & 1.805 & 0.886 \\ 
+		& (1.470) & (0.567) \\ 
+		Public Housing & 24.027 & 1.309 \\ 
+		& (990.845) & (0.909) \\ 
+		Disability & 2.172 & 1.374^{**} \\ 
+		& (1.468) & (0.664) \\ 
+		WIC & 0.249 & -0.345 \\ 
+		& (0.770) & (0.385) \\ 
+		Headstart & -2.489^{***} & -1.015^{**} \\ 
+		& (0.753) & (0.487) \\ 
+		College Grant & 0.455 & 0.089 \\ 
+		& (0.634) & (0.292) \\ 
+		Gov. Student Loans & 0.366 & -0.208 \\ 
+		& (0.630) & (0.283) \\ 
+		Vet. Benefits & -1.826 & -0.445 \\ 
+		& (1.124) & (0.494) \\ 
+		Worker's Comp & -0.828 & -0.431 \\ 
+		& (0.609) & (0.326) \\ 
+		Gov. Business Loan & 17.354 & -0.135 \\ 
+		& (1,622.703) & (0.571) \\ 
+		GI Bill & 0.945 & 0.261 \\ 
+		& (1.261) & (0.493) \\ 
+		Mortgage Tax Credit & 1.178^{**} & 0.306 \\ 
+		& (0.548) & (0.232) \\ 
+		Constant & -0.496 &  \\ 
+		& (1.426) &  \\ 
+		N & \multicolumn{1}{c}{458} & \multicolumn{1}{c}{480} \\ 
+		Log Likelihood & \multicolumn{1}{c}{-99.132} &  \\ 
+		AIC & \multicolumn{1}{c}{252.264} &  \\ 
+		\hline \\[-1.8ex] 
+		\multicolumn{3}{l}{$^{*}$p $<$ .1; $^{**}$p $<$ .05; $^{***}$p $<$ .01} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
+\end{tabular}
+\end{adjustbox}
+\caption{Table 1} 
+\end{table}
+\end{singlespace}
+\restoregeometry
+
+%%Model 9-10 - Total Aid Dummy and Total Aid*PID interaction
+\begin{table}[!htbp] \centering 
+	\caption{Table 2} 
+	\label{}
+	\begin{adjustbox}{width=1\textwidth}
+	\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+		\\[-1.8ex]\hline \\[-1.8ex] 
+		\\[-1.8ex] & \multicolumn{1}{c}{Vote Frequency (1-4)} & \multicolumn{1}{c}{Vote Frequency Dummy} & \multicolumn{1}{c}{Vote Frequency (1-4)} & \multicolumn{1}{c}{Vote Frequency Dummy} \\ 
+		\\[-1.8ex] & \multicolumn{1}{c}{Ordered Logit} & \multicolumn{1}{c}{Binary Logit} & \multicolumn{1}{c}{Ordered Logit} & \multicolumn{1}{c}{Binary Logit} \\ 
+		\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
+		\hline \\[-1.8ex] 
+		Total Aid & -0.002 & 0.159^{*} & 0.030 & 0.249^{**} \\ 
+		& (0.047) & (0.089) & (0.064) & (0.118) \\ 
+		Party ID & 0.027 & 0.338 & 0.264 & 1.061 \\ 
+		& (0.211) & (0.387) & (0.392) & (0.697) \\ 
+		White & 0.140 & 0.263 & 0.126 & 0.214 \\ 
+		& (0.238) & (0.383) & (0.239) & (0.387) \\ 
+		Education & -0.025 & 0.074 & -0.031 & 0.066 \\ 
+		& (0.099) & (0.178) & (0.099) & (0.179) \\ 
+		Female & -0.204 & -0.046 & -0.224 & -0.143 \\ 
+		& (0.209) & (0.357) & (0.211) & (0.367) \\ 
+		Follow Public Affairs & -0.782^{***} & -0.595^{***} & -0.788^{***} & -0.631^{***} \\ 
+		& (0.117) & (0.174) & (0.117) & (0.178) \\ 
+		Trust of Gov. & 0.381^{*} & 0.690^{*} & 0.374^{*} & 0.689^{*} \\ 
+		& (0.210) & (0.363) & (0.210) & (0.366) \\ 
+		Self-Efficacy & 0.132 & 1.161^{***} & 0.133 & 1.197^{***} \\ 
+		& (0.216) & (0.375) & (0.216) & (0.379) \\ 
+		Total Aid X Party ID &  &  & -0.065 & -0.232 \\ 
+		&  &  & (0.090) & (0.180) \\ 
+		Constant &  & -0.302 &  & -0.434 \\ 
+		&  & (1.179) &  & (1.195) \\ 
+		N & \multicolumn{1}{c}{480} & \multicolumn{1}{c}{458} & \multicolumn{1}{c}{480} & \multicolumn{1}{c}{458} \\ 
+		Log Likelihood &  & \multicolumn{1}{c}{-133.086} &  & \multicolumn{1}{c}{-132.182} \\ 
+		AIC &  & \multicolumn{1}{c}{284.171} &  & \multicolumn{1}{c}{284.363} \\ 
+		\hline \\[-1.8ex] 
+		\multicolumn{5}{l}{$^{*}$p $<$ .1; $^{**}$p $<$ .05; $^{***}$p $<$ .01} \\ 
+	\end{tabular} 
+	\end{adjustbox}
+\end{table} 
+
+%%Model 3: Vote ~ recieves aid dummy**partyID + controls
+%%Model 4: Vote ~ count of loans + count of entitlements + county of means + count of universal + party ID + controls
+\begin{table}[!htbp] \centering 
+
+	\caption{Table 3} 
+	\label{} 
+	\begin{adjustbox}{width=1\textwidth}
+	\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+		\\[-1.8ex]\hline \\[-1.8ex] 
+		\\[-1.8ex] & \multicolumn{1}{c}{Vote Frequency Dummy} & \multicolumn{1}{c}{Vote Frequency (1-4)} & \multicolumn{1}{c}{Vote Frequency Dummy} & \multicolumn{1}{c}{Vote Frequency (1-4)} \\ 
+		\\[-1.8ex] & \multicolumn{1}{c}{Binomial Logit} & \multicolumn{1}{c}{Ordered Logit} & \multicolumn{1}{c}{Binomial Logit} & \multicolumn{1}{c}{Ordered Logit} \\ 
+		\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
+		\hline \\[-1.8ex] 
+		Aid Dummy & 2.755^{***} & 1.058^{*} &  &  \\ 
+		& (0.819) & (0.619) &  &  \\ 
+		Count: Loans &  &  & 0.744^{*} & -0.117 \\ 
+		&  &  & (0.446) & (0.220) \\ 
+		Count: Universal Aid &  &  & 0.488 & 0.212 \\ 
+		&  &  & (0.374) & (0.193) \\ 
+		Count: Entitlements &  &  & 0.319 & 0.138 \\ 
+		&  &  & (0.232) & (0.115) \\ 
+		Count: Means-Tested Aid &  &  & -0.049 & -0.101 \\ 
+		&  &  & (0.149) & (0.080) \\ 
+		Party ID & 16.727 & 1.323 & 0.291 & -0.007 \\ 
+		& (819.837) & (0.955) & (0.393) & (0.213) \\ 
+		White & -0.016 & 0.070 & 0.356 & 0.092 \\ 
+		& (0.428) & (0.250) & (0.415) & (0.244) \\ 
+		Education & -0.004 & -0.052 & 0.042 & 0.013 \\ 
+		& (0.181) & (0.099) & (0.186) & (0.104) \\ 
+		Female & -0.222 & -0.264 & 0.131 & -0.118 \\ 
+		& (0.372) & (0.212) & (0.374) & (0.217) \\ 
+		Follow Public Affairs & -0.577^{***} & -0.764^{***} & -0.574^{***} & -0.772^{***} \\ 
+		& (0.179) & (0.120) & (0.182) & (0.120) \\ 
+		Trust of Gov. & 0.510 & 0.351^{*} & 0.738^{**} & 0.325 \\ 
+		& (0.371) & (0.211) & (0.374) & (0.215) \\ 
+		Self-Efficacy & 1.342^{***} & 0.183 & 1.153^{***} & 0.139 \\ 
+		& (0.398) & (0.218) & (0.381) & (0.219) \\ 
+		Aid Dummy X Party ID & -16.630 & -1.362 &  &  \\ 
+		& (819.837) & (0.983) &  &  \\ 
+		Constant & -1.860 &  & -0.422 &  \\ 
+		& (1.359) &  & (1.223) &  \\ 
+		N & \multicolumn{1}{c}{458} & \multicolumn{1}{c}{480} & \multicolumn{1}{c}{458} & \multicolumn{1}{c}{480} \\ 
+		Log Likelihood & \multicolumn{1}{c}{-128.697} &  & \multicolumn{1}{c}{-130.974} &  \\ 
+		AIC & \multicolumn{1}{c}{277.395} &  & \multicolumn{1}{c}{285.949} &  \\ 
+		\hline \\[-1.8ex] 
+		\multicolumn{5}{l}{$^{*}$p $<$ .1; $^{**}$p $<$ .05; $^{***}$p $<$ .01} \\ 
+	\end{tabular} 
+	\end{adjustbox}
+\end{table} 
+
+%expanded model
+%%test of means testing on self-efficacy
+
 %\section{Discussion}
 %\section{Conclusion}
+
+
 
 
 \end{document}

@@ -8,6 +8,7 @@ library(MASS)
 max_sub <- read_csv("Data/max_sub.csv")
 
 
+
 #DV: VOTE
 #TABLE
 #Model 1: Vote ~ all programs + party ID
@@ -108,6 +109,15 @@ ols_wt_8 <- lm(VOTE ~ total_loans + total_uni + total_ent + total_means + PTYIDd
                  white + EDUC + sex + FOLLOWPA + TRUSTOFF + PEOPSAY,
                weights = allwt, data =  max_sub)
 
+ols_wt_9 <- lm(VOTE ~ Total + PTYIDd + white + EDUC + sex + 
+                 FOLLOWPA + TRUSTOFF + PEOPSAY,
+               weights = allwt, data =  max_sub)
+
+ols_wt_10 <- lm(VOTE ~ Total + PTYIDd + Total*PTYIDd + white + EDUC + sex + 
+                 FOLLOWPA + TRUSTOFF + PEOPSAY,
+               weights = allwt, data =  max_sub)
+
+
 
 ##ROBUST to: Dichotomous measure of Turnout
 ##high/low turnout groups
@@ -159,6 +169,14 @@ hilo8 <- glm(VOTE_D ~ total_loans + total_uni + total_ent + total_means + PTYIDd
                  white + EDUC + sex + FOLLOWPA + TRUSTOFF + PEOPSAY,
                weights = allwt, data =  rob1, family="binomial")
 
+hilo9 <- glm(VOTE_D ~ Total + PTYIDd + white + EDUC + sex + 
+                 FOLLOWPA + TRUSTOFF + PEOPSAY,
+             weights = allwt, data =  rob1, family="binomial")
+
+hilo10 <- glm(VOTE_D ~ Total + PTYIDd + Total*PTYIDd + white + EDUC + sex + 
+                  FOLLOWPA + TRUSTOFF + PEOPSAY,
+              weights = allwt, data =  rob1, family="binomial")
+
 
 
 ##ROBUST TO ORDINAL LOGIT
@@ -204,29 +222,36 @@ ord8 <- polr(VOTE ~ total_means + PTYIDd + total_means*PTYIDd +
                  white + EDUC + sex + FOLLOWPA + TRUSTOFF + PEOPSAY,
                weights = allwt, data =  max_sub, Hess=TRUE)
 
+ord9 <- polr(VOTE ~ Total + PTYIDd + white + EDUC + sex + 
+               FOLLOWPA + TRUSTOFF + PEOPSAY,
+              weights = allwt, data =  max_sub, Hess=TRUE)
+
+ord10 <- polr(VOTE ~ Total + PTYIDd + Total*PTYIDd + white + EDUC + sex + 
+                FOLLOWPA + TRUSTOFF + PEOPSAY,
+               weights = allwt, data =  max_sub, Hess=TRUE)
+
 
 ##TABLES
 stargazer(ols_uw_1, ols_uw_2, ols_uw_3, ols_uw_4,
           title="Unweighted Models 1-4", type="latex", style = "apsr",
-          align=TRUE, out="unweighted_1.tex")
+          align=TRUE, out="Tables/unweighted_1.tex")
 
 stargazer(ols_uw_5, ols_uw_6, ols_uw_7, ols_uw_8,
           title="Unweighted Models 5-8", type="latex", style = "apsr",
-          align=TRUE, out="unweighted_2.tex")
+          align=TRUE, out="Tables/unweighted_2.tex")
 
-stargazer(ols_wt_1, hilo1, ord1, ols_wt_2, hilo2, ord2,
+stargazer(hilo2, ord2,
           title="Weighted Models 1-3", type="latex", style = "apsr",
-          align=TRUE, out="weighted_1.tex")
+          align=TRUE, out="Tables/weighted_1.tex")
 
-stargazer(ols_wt_3, hilo3, ord3, ols_wt_4, hilo4, ord4,
+stargazer(hilo3, ord3, hilo4, ord4,
           title="Weighted Models 1-3", type="latex", style = "apsr",
-          align=TRUE, out="weighted_2.tex")
+          align=TRUE, out="Tables/weighted_2.tex")
 
-stargazer( ols_wt_5, hilo5, ord5, ols_wt_6, hilo6, ord6,
-          title="Weighted Models 4-6", type="latex", style = "apsr",
-          align=TRUE, out="weighted_3.tex")
-
-stargazer(ols_wt_7, hilo7, ord7, ols_wt_8, hilo8, ord8,
+stargazer(ord5, ord6, ord7, ord8,
           title="Weighted Models 7-8", type="latex", style = "apsr",
-          align=TRUE, out="weighted_4.tex")
+          align=TRUE, out="Tables/weighted_3.tex")
 
+stargazer(ord9, hilo9, ord10, hilo10,
+          title="test", type="latex", style = "apsr",
+          align=TRUE, out="Tables/weighted_4.tex")

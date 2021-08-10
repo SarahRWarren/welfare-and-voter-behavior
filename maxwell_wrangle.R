@@ -399,6 +399,10 @@ a$VOTE_F <- factor(a$VOTE_F, levels = c("Always", "Usually", "Sometimes",
 #class(a$VOTE_F)
 
 max_sub <- a %>%
+  mutate(sex = as.numeric(sex),
+         sex = recode(sex,
+                       "1" = 0,
+                       "2" = 1)) %>%
   select(allwt, INCOME, white, VOTE, VOTE_F, EDUC, FDSTMPd, FDSTMP, SOCSECd, SOCSECf,
          MEDAIDd, MEDICAID, MEDICAREd, MEDICAREf, WELFAREd, WELFARE, EITCd, EITCf,
          UNEMPLOYd, UNEMPLOYf, GOVTPENd, GOVTPENf, PUBHOUd, PUBHOU, DISABITYd, DISABITYf,
