@@ -1,6 +1,5 @@
 library(tidyverse)
 library(readxl)
-
 ##load data
 #recode 5pt scale as factor
 ##create dummies for R recieves (1) and R doesn't recieve (0)
@@ -22,6 +21,11 @@ max <- read_xls("Data/allmax07.xls") %>%
                            "3" = "2",
                            "4" = "1",
                            "5" = "5")) %>%
+  mutate(PEOPSAY = as.numeric(PEOPSAY),
+         PEOPSAY = recode(PEOPSAY,
+                       "1" = 0,
+                       "2" = 1,
+                       "3" = 7)) %>%
   mutate(VOTE_F = as.factor(VOTE),
          VOTE_F = recode(VOTE,
                          "1" = "Not at all",
@@ -146,8 +150,7 @@ max <- read_xls("Data/allmax07.xls") %>%
                        "1" = "Respondent",
                        "2" = "R's Family",
                        "3" = "R and R's Family",
-                       "4" = "None",
-                       "5" = "No response")) %>%
+                       "4" = "None")) %>%
   mutate(GIBILLf = as.factor(GIBILL),
          GIBILLf = recode(GIBILL,
                        "1" = "Respondent",

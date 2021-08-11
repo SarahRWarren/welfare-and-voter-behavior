@@ -44,7 +44,7 @@ Seymour Lipset (1960) argued that one's decision to vote depends upon the percei
 
 Given such strong personal incentives, one might expect welfare recipients to be more politically active than other citizens (Lipset 1960; Olson 1965); however, this does not appear to be the case in the United States. As political scientists, how can we reconcile our theoretical predictions with this empirical reality? I build on existing theories of attribution and voter behavior to model a novel theoretical explanation for the voting behavior of American welfare recipients. I empirically evaluate the implications of my model using data from the Maxwell Poll from 2004-2007. Using a novel measurement technique to classify aid-types, I find that entitlements are associated with an increase in self-reported turnout in elections while government subsidized loans are associated with a decrease in self-reported turnout. Importantly, the effect of means-tested aid on government turnout appears to be less straightforward than previous work suggests.
 
-I use a dynamic Bayesian model with incomplete information to highlight partisanship as a mechanism which can cause variation in turnout among aid recipients. Having done so, I develop hypotheses which will hold if this model is useful as a picture of the world (CITE JIM AND RUBENSTEIN). I find ___. I then briefly present an expanded version of the model and test the effects of aid on self-reported self-efficacy. Importantly, I find ___. The rest of the paper proceeds as follows. Section 1 reviews the relevant literature and dominant theories of voter attribution and redistributive politics in the United States. Section 2 outlines the model and present its equilibrium outcome. Section 3 presents my empirical hypotheses, data, and empirical analysis. Section 4 presents a brief discussion of the expanded model and an empirical test of the self efficacy mechanism. Section 5 concludes and discusses directions for future research.
+I use a dynamic Bayesian model with incomplete information to highlight partisanship as a mechanism which can cause variation in turnout among aid recipients. Having done so, I develop hypotheses which will hold if this model is useful as a picture of the world (CITE JIM AND RUBENSTEIN). I then briefly present an expanded version of the model and test the effects of aid on self-reported self-efficacy. The rest of the paper proceeds as follows. Section 1 reviews the relevant literature and dominant theories of voter attribution and redistributive politics in the United States. Section 2 outlines the model and present its equilibrium outcome. Section 3 presents my empirical hypotheses, data, and empirical analysis. Section 4 presents a brief discussion of the expanded model and an empirical test of the self efficacy mechanism. Section 5 concludes and discusses directions for future research.
 
 \section{The Quiescence of Aid Recipients}
 There are two widely accepted reasons for the quiescence of aid-receiving voters in the United States. First, because aid recipients are often less well educated and less well off financially, the boost to their participation by their larger interest in government activity is insufficient to overcome their other resource deficits (Verba, Scholzman, and Brady 1995, 411). Second, aid institutions in the United States diminish the perceived self-efficacy of aid-recipients, making them less likely to turnout to vote. Pateman (1970) and Piven and Cloward (1971) highlight the educative effects of institutions, which shape the behavior of aid participants. Soss (1999) and others (Madsen 1986; Mettler and Stonecash 2008) argue that institutions like means-testing and constant eligibility evaluation by bureaucrats may teach participants that government is not responsive to them. Participants carry a sense of low self-efficacy to other political processes, including as voting, leading to decreased turnout. Other scholars, however, find that aid intended for the very poor can have a very positive effect on political participation (SOURCES).
@@ -76,7 +76,7 @@ where $y_t\epsilon {0,1}$ is the executive’s choice of distributive aid policy
 
 \emph{Voter's Utility}: V’s utility function is constant across periods: 
 
-$U_{p}^t = -|x_o - x_V| + y_t$
+$U_{V}^t = -|x_o - x_V| + y_t$
 
 where $y_t\epsilon{0,1}$ represents the amount of distributive aid awarded to the voter in period $t\epsilon{1,2},$, $x_V$ represents the voter’s ideal point, and $x_o$ is the ideal point of the office-holding politician, who is either the Incumbent $(x_I=1)$ or the Challenger $(x_C=0).$ Hence, the voter’s utility depends on his ideological proximity to the office holder as well as his benefit from any distributive aid.
 
@@ -169,83 +169,88 @@ From Lemmas A, B, and C, we can derive the simple prediction that those who favo
 
 \emph{H1(b): For a right-wing voter $(x_V > \frac{1}{2})$, receiving distributive aid in period 1 causes a strict increase in the probability of voter turnout.}
 
-%\section{Research Design}
+\section{Research Design}
+To test the implications of my model, I utilize data from The Maxwell Poll on Citizenship and Inequality from Syracuse University, directed by Jeffery Stonecash. The poll includes data on federal aid status, voter behavior, and civic engagement. The poll is nation-wide annual survey and was administered by phone from 2004-2007. The cumulative data file from the surveys contain weights so that the data is nationally representative and each year averages approximately 600 respondents (n=458-480 after controlling for null responses in the data).
 
+I conduct my analysis using binary and ordered logit models, but my results are robust to OLS estimation (see Appendix). My dependent variable is turnout. The Maxwell Poll asks respondents whether they turnout Always (4), Often (3), Sometimes (2), or Not at all (1). I use this ordinal measure of turnout as well as a binary measure in which those who respond ``Always" and ``Often" are coded 1 and those who responded ``Sometimes" and ``Never" are coded 0.
 
-%\section{Analysis}
+My primary independent variable is receiving government aid. I employ several measures of aid in different models to account for heterogeneity within aid programs and account for the cumulative effect of aid on voter behavior. First, I use binary variables for each of the nineteen aid programs contained in the Maxwell Poll dataset in which a 1 means the respondent or a member of the respondent’s household receives the benefit and a 0 means no one in the household receives that benefit. Second, I create a binary variable in which 1 means the respondent or a member of the respondent’s household receives any form of government assistance and a 0 means no one in the household receives government aid. Finally, I use counts of the total number of entitlement, means-tested, universal, and subsidized loan aid the household receives to create an aid-category participation measure. A 0 in all four categories would mean the respondent’s household receives no aid, while a 1 in entitlements and a 0 in the other three categories would mean the respondent’s household receives one kind of entitlement benefit, but no other government aid.
 
+My theory predicts that Party ID directly influences voting behavior after aid. I use a binary measure in which a 1 is Republican and a 0 is Democrat. I also include a battery of controls, including race, income, education, sex, how closely the person follows public events, their trust in public officials, and their sense of their political self-efficacy.
+
+\section{Analysis}
+First, I estimate a model using dummy variables for each aid program. Recall that my model shows that, holding partisan affiliation constant, aid has a strictly positive effect on the probability of turnout. This model estimates the effect of each aid program on voting frequency, holding all else constant.
+
+In the binary logit, Social Security, Unemployment Insurance, and Mortgage Tax Credits have a positive and significant effect on the likelihood of turnout, holding all else constant. Medicaid, Medicare, and Head Start has a negative effect, holding all else constant. In the ordered logit, EITC and Head Start have a negative and significant effect on turnout and Social Security Disability Insurance has a positive and significant effect on turnout, holding all else constant. In both models, controls behave largely as expected, except for Following Public Affairs. Following public affairs is associated with a \textit{decrease} in the likelihood of turning out.
 
 %%Model 2: Vote ~ all programs + controls (race, income, education, sex, followpa, trustoff, peopsay)
 \newgeometry{left=3cm,bottom=0.5cm,right=3cm,top=0.5cm}
-\begin{singlespace}
 	\begin{table}[!htbp] \centering 
 		\small
 		\begin{adjustbox}{width=.6\textwidth}
-	\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} } 
-		\\[-1.8ex]\hline \\[-1.8ex] 
-		\\[-1.8ex] & \multicolumn{1}{c}{Vote Frequency Dummy} & \multicolumn{1}{c}{Vote Frequency (1-4)} \\ 
-		\\[-1.8ex] & \multicolumn{1}{c}{Binary Logit} & \multicolumn{1}{c}{Ordered Logit} \\ 
-		\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)}\\ 
-		\hline \\[-1.8ex] 
-		Party ID & 0.499 & 0.036 \\ 
-		& (0.492) & (0.228) \\ 
-		White & 0.092 & 0.100 \\ 
-		& (0.550) & (0.269) \\ 
-		Education & -0.104 & 0.011 \\ 
-		& (0.233) & (0.113) \\ 
-		Female & -0.143 & -0.018 \\ 
-		& (0.454) & (0.232) \\ 
-		Follow Public Affairs & -0.992^{***} & -0.814^{***} \\ 
-		& (0.240) & (0.127) \\ 
-		Trust of Gov & 1.570^{***} & 0.397^{*} \\ 
-		& (0.469) & (0.225) \\ 
-		Self-Efficacy & 1.333^{***} & 0.106 \\ 
-		& (0.482) & (0.236) \\ 
-		SNAP & -1.084 & 0.177 \\ 
-		& (0.945) & (0.572) \\ 
-		Social Security & 4.143^{***} & 0.500 \\ 
-		& (1.522) & (0.497) \\ 
-		Medicaid & -1.519^{*} & -0.623 \\ 
-		& (0.889) & (0.471) \\ 
-		Medicare & -2.591^{**} & -0.387 \\ 
-		& (1.231) & (0.539) \\ 
-		Welfare & -0.599 & -0.038 \\ 
-		& (0.971) & (0.531) \\ 
-		EITC & -0.292 & -0.496^{**} \\ 
-		& (0.514) & (0.245) \\ 
-		Unemployment & 1.137^{*} & 0.205 \\ 
-		& (0.637) & (0.261) \\ 
-		Pension & 1.805 & 0.886 \\ 
-		& (1.470) & (0.567) \\ 
-		Public Housing & 24.027 & 1.309 \\ 
-		& (990.845) & (0.909) \\ 
-		Disability & 2.172 & 1.374^{**} \\ 
-		& (1.468) & (0.664) \\ 
-		WIC & 0.249 & -0.345 \\ 
-		& (0.770) & (0.385) \\ 
-		Headstart & -2.489^{***} & -1.015^{**} \\ 
-		& (0.753) & (0.487) \\ 
-		College Grant & 0.455 & 0.089 \\ 
-		& (0.634) & (0.292) \\ 
-		Gov. Student Loans & 0.366 & -0.208 \\ 
-		& (0.630) & (0.283) \\ 
-		Vet. Benefits & -1.826 & -0.445 \\ 
-		& (1.124) & (0.494) \\ 
-		Worker's Comp & -0.828 & -0.431 \\ 
-		& (0.609) & (0.326) \\ 
-		Gov. Business Loan & 17.354 & -0.135 \\ 
-		& (1,622.703) & (0.571) \\ 
-		GI Bill & 0.945 & 0.261 \\ 
-		& (1.261) & (0.493) \\ 
-		Mortgage Tax Credit & 1.178^{**} & 0.306 \\ 
-		& (0.548) & (0.232) \\ 
-		Constant & -0.496 &  \\ 
-		& (1.426) &  \\ 
-		N & \multicolumn{1}{c}{458} & \multicolumn{1}{c}{480} \\ 
-		Log Likelihood & \multicolumn{1}{c}{-99.132} &  \\ 
-		AIC & \multicolumn{1}{c}{252.264} &  \\ 
-		\hline \\[-1.8ex] 
-		\multicolumn{3}{l}{$^{*}$p $<$ .1; $^{**}$p $<$ .05; $^{***}$p $<$ .01} \\ 
+			\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} } 
+				\\[-1.8ex]\hline \\[-1.8ex] 
+				\\[-1.8ex] & \multicolumn{1}{c}{Vote Frequency Dummy} & \multicolumn{1}{c}{Vote Frequency (1-4)} \\ 
+				\\[-1.8ex] & \multicolumn{1}{c}{Binary Logit} & \multicolumn{1}{c}{Ordered Logit} \\ 
+				\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)}\\ 
+				\hline \\[-1.8ex] 
+	PTYIDd & 0.499 & 0.036 \\ 
+	& (0.492) & (0.228) \\ 
+	white & 0.092 & 0.100 \\ 
+	& (0.550) & (0.269) \\ 
+	EDUC & -0.104 & 0.011 \\ 
+	& (0.233) & (0.113) \\ 
+	sex & -0.143 & -0.018 \\ 
+	& (0.454) & (0.232) \\ 
+	FOLLOWPA & -0.992^{***} & -0.814^{***} \\ 
+	& (0.240) & (0.127) \\ 
+	TRUSTOFF & 1.570^{***} & 0.397^{*} \\ 
+	& (0.469) & (0.225) \\ 
+	PEOPSAY & 1.333^{***} & 0.106 \\ 
+	& (0.482) & (0.236) \\ 
+	FDSTMPd & -1.084 & 0.176 \\ 
+	& (0.945) & (0.572) \\ 
+	SOCSECd & 4.143^{***} & 0.499 \\ 
+	& (1.522) & (0.497) \\ 
+	MEDAIDd & -1.519^{*} & -0.623 \\ 
+	& (0.889) & (0.471) \\ 
+	MEDICAREd & -2.591^{**} & -0.387 \\ 
+	& (1.231) & (0.539) \\ 
+	WELFAREd & -0.599 & -0.038 \\ 
+	& (0.971) & (0.531) \\ 
+	EITCd & -0.292 & -0.496^{**} \\ 
+	& (0.514) & (0.245) \\ 
+	UNEMPLOYd & 1.137^{*} & 0.205 \\ 
+	& (0.637) & (0.261) \\ 
+	GOVTPENd & 1.805 & 0.886 \\ 
+	& (1.470) & (0.567) \\ 
+	PUBHOUd & 24.027 & 1.310 \\ 
+	& (990.845) & (0.909) \\ 
+	DISABITYd & 2.172 & 1.374^{**} \\ 
+	& (1.468) & (0.664) \\ 
+	WICd & 0.249 & -0.345 \\ 
+	& (0.770) & (0.385) \\ 
+	HEADd & -2.489^{***} & -1.015^{**} \\ 
+	& (0.753) & (0.487) \\ 
+	COLLGRNTd & 0.455 & 0.089 \\ 
+	& (0.634) & (0.292) \\ 
+	STULOANSd & 0.366 & -0.209 \\ 
+	& (0.630) & (0.283) \\ 
+	VETBENd & -1.826 & -0.444 \\ 
+	& (1.124) & (0.494) \\ 
+	WRKCOMPd & -0.828 & -0.431 \\ 
+	& (0.609) & (0.326) \\ 
+	BUSLOANd & 17.354 & -0.136 \\ 
+	& (1,622.703) & (0.571) \\ 
+	GIBILLd & 0.945 & 0.260 \\ 
+	& (1.261) & (0.493) \\ 
+	MTGDEDTd & 1.178^{**} & 0.306 \\ 
+	& (0.548) & (0.232) \\ 
+	Constant & 0.837 &  \\ 
+	& (1.214) &  \\ 
+	N & \multicolumn{1}{c}{458} & \multicolumn{1}{c}{480} \\ 
+	Log Likelihood & \multicolumn{1}{c}{-99.132} &  \\ 
+	AIC & \multicolumn{1}{c}{252.264} &  \\ 
 \hline 
 \hline \\[-1.8ex] 
 \textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\
@@ -253,106 +258,161 @@ From Lemmas A, B, and C, we can derive the simple prediction that those who favo
 \end{adjustbox}
 \caption{Table 1} 
 \end{table}
-\end{singlespace}
 \restoregeometry
 
-%%Model 9-10 - Total Aid Dummy and Total Aid*PID interaction
+Recall $H1a$ and $H1b$ assert that receiving aid \textit{and} party ID cause a change in turnout. To test my hypotheses, I use a dummy variable for aid, which takes on a value of 1 if the respondent benefits from any of the federal aid programs asked about in the survey and 0 otherwise. Using this as my primary independent variable, I estimate a model that interacts Party ID and the Aid Dummy. The results of both the binary and ordered logit for both models are shown in the table below.
+%%Model 3: Vote ~ recieves aid dummy**partyID + controls
+\begin{table}[!htbp] \centering 
+	\caption{Table 2} 
+	\label{}
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} } 
+	\\[-1.8ex]\hline \\[-1.8ex] 
+	\\[-1.8ex] & \multicolumn{1}{c}{VOTE\_D} & \multicolumn{1}{c}{VOTE} \\ 
+	\\[-1.8ex] & \multicolumn{1}{c}{logistic} & \multicolumn{1}{c}{ordered} \\ 
+	& \multicolumn{1}{c}{} & \multicolumn{1}{c}{logistic} \\ 
+	\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)}\\ 
+	\hline \\[-1.8ex] 
+	aid\_dummy & 2.755^{***} & 1.058^{*} \\ 
+	& (0.819) & (0.619) \\ 
+	PTYIDd & 16.727 & 1.323 \\ 
+	& (819.837) & (0.955) \\ 
+	white & -0.016 & 0.070 \\ 
+	& (0.428) & (0.250) \\ 
+	EDUC & -0.004 & -0.052 \\ 
+	& (0.181) & (0.099) \\ 
+	sex & -0.222 & -0.264 \\ 
+	& (0.372) & (0.212) \\ 
+	FOLLOWPA & -0.577^{***} & -0.764^{***} \\ 
+	& (0.179) & (0.120) \\ 
+	TRUSTOFF & 0.510 & 0.351^{*} \\ 
+	& (0.371) & (0.211) \\ 
+	PEOPSAY & 1.342^{***} & 0.183 \\ 
+	& (0.398) & (0.218) \\ 
+	aid\_dummy:PTYIDd & -16.630 & -1.362 \\ 
+	& (819.837) & (0.983) \\ 
+	Constant & -0.518 &  \\ 
+	& (1.161) &  \\ 
+	N & \multicolumn{1}{c}{458} & \multicolumn{1}{c}{480} \\ 
+	Log Likelihood & \multicolumn{1}{c}{-128.697} &  \\ 
+	AIC & \multicolumn{1}{c}{277.395} &  \\ 
+	\hline \\[-1.8ex] 
+	\multicolumn{3}{l}{$^{*}$p $<$ .1; $^{**}$p $<$ .05; $^{***}$p $<$ .01} \\ 
+		\end{tabular}
+\end{table} 
+
+The aid dummy and party ID are positively signed, as predicted by $H1a$ and $H1b$. However, the interaction between the two is neither significant nor signed as expected. Because the coefficient on the interaction term is negative, when aid $= 1$ and Party ID $=1$ (Republican), the likelihood of turning out to vote \textit{decreases}, holding all else constant at 0. Thus, I fail to reject the null with Model 2.
+
+I also measure aid continuously as the count of total aid programs in which a person participates. I interact this total aid measure on Party ID. The results are shown in Table 3. As before, the measures of aid and Party ID are signed as predicted, but the coefficient on the interaction term is negative. Again, I do not find support for my hypotheses.
+
+%%Model 9-10 - Total Aid and Total Aid*PID interaction
 \begin{table}[!htbp] \centering 
 	\caption{Table 2} 
 	\label{}
 	\begin{adjustbox}{width=1\textwidth}
-	\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
-		\\[-1.8ex]\hline \\[-1.8ex] 
-		\\[-1.8ex] & \multicolumn{1}{c}{Vote Frequency (1-4)} & \multicolumn{1}{c}{Vote Frequency Dummy} & \multicolumn{1}{c}{Vote Frequency (1-4)} & \multicolumn{1}{c}{Vote Frequency Dummy} \\ 
-		\\[-1.8ex] & \multicolumn{1}{c}{Ordered Logit} & \multicolumn{1}{c}{Binary Logit} & \multicolumn{1}{c}{Ordered Logit} & \multicolumn{1}{c}{Binary Logit} \\ 
-		\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
-		\hline \\[-1.8ex] 
-		Total Aid & -0.002 & 0.159^{*} & 0.030 & 0.249^{**} \\ 
-		& (0.047) & (0.089) & (0.064) & (0.118) \\ 
-		Party ID & 0.027 & 0.338 & 0.264 & 1.061 \\ 
-		& (0.211) & (0.387) & (0.392) & (0.697) \\ 
-		White & 0.140 & 0.263 & 0.126 & 0.214 \\ 
-		& (0.238) & (0.383) & (0.239) & (0.387) \\ 
-		Education & -0.025 & 0.074 & -0.031 & 0.066 \\ 
-		& (0.099) & (0.178) & (0.099) & (0.179) \\ 
-		Female & -0.204 & -0.046 & -0.224 & -0.143 \\ 
-		& (0.209) & (0.357) & (0.211) & (0.367) \\ 
-		Follow Public Affairs & -0.782^{***} & -0.595^{***} & -0.788^{***} & -0.631^{***} \\ 
-		& (0.117) & (0.174) & (0.117) & (0.178) \\ 
-		Trust of Gov. & 0.381^{*} & 0.690^{*} & 0.374^{*} & 0.689^{*} \\ 
-		& (0.210) & (0.363) & (0.210) & (0.366) \\ 
-		Self-Efficacy & 0.132 & 1.161^{***} & 0.133 & 1.197^{***} \\ 
-		& (0.216) & (0.375) & (0.216) & (0.379) \\ 
-		Total Aid X Party ID &  &  & -0.065 & -0.232 \\ 
-		&  &  & (0.090) & (0.180) \\ 
-		Constant &  & -0.302 &  & -0.434 \\ 
-		&  & (1.179) &  & (1.195) \\ 
-		N & \multicolumn{1}{c}{480} & \multicolumn{1}{c}{458} & \multicolumn{1}{c}{480} & \multicolumn{1}{c}{458} \\ 
-		Log Likelihood &  & \multicolumn{1}{c}{-133.086} &  & \multicolumn{1}{c}{-132.182} \\ 
-		AIC &  & \multicolumn{1}{c}{284.171} &  & \multicolumn{1}{c}{284.363} \\ 
-		\hline \\[-1.8ex] 
-		\multicolumn{5}{l}{$^{*}$p $<$ .1; $^{**}$p $<$ .05; $^{***}$p $<$ .01} \\ 
-	\end{tabular} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+	\\[-1.8ex]\hline \\[-1.8ex] 
+	\\[-1.8ex] & \multicolumn{1}{c}{VOTE} & \multicolumn{1}{c}{VOTE\_D} & \multicolumn{1}{c}{VOTE} & \multicolumn{1}{c}{VOTE\_D} \\ 
+	\\[-1.8ex] & \multicolumn{1}{c}{ordered} & \multicolumn{1}{c}{logistic} & \multicolumn{1}{c}{ordered} & \multicolumn{1}{c}{logistic} \\ 
+	& \multicolumn{1}{c}{logistic} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{logistic} & \multicolumn{1}{c}{} \\ 
+	\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
+	\hline \\[-1.8ex] 
+	Total & -0.002 & 0.159^{*} & 0.030 & 0.249^{**} \\ 
+	& (0.047) & (0.089) & (0.064) & (0.118) \\ 
+	PTYIDd & 0.028 & 0.338 & 0.264 & 1.061 \\ 
+	& (0.211) & (0.387) & (0.392) & (0.697) \\ 
+	white & 0.140 & 0.263 & 0.126 & 0.214 \\ 
+	& (0.238) & (0.383) & (0.239) & (0.387) \\ 
+	EDUC & -0.025 & 0.074 & -0.031 & 0.066 \\ 
+	& (0.099) & (0.178) & (0.099) & (0.179) \\ 
+	sex & -0.204 & -0.046 & -0.224 & -0.143 \\ 
+	& (0.209) & (0.357) & (0.211) & (0.367) \\ 
+	FOLLOWPA & -0.782^{***} & -0.595^{***} & -0.788^{***} & -0.631^{***} \\ 
+	& (0.117) & (0.174) & (0.117) & (0.178) \\ 
+	TRUSTOFF & 0.381^{*} & 0.690^{*} & 0.374^{*} & 0.689^{*} \\ 
+	& (0.210) & (0.363) & (0.210) & (0.366) \\ 
+	PEOPSAY & 0.132 & 1.161^{***} & 0.133 & 1.197^{***} \\ 
+	& (0.216) & (0.375) & (0.216) & (0.379) \\ 
+	Total:PTYIDd &  &  & -0.065 & -0.232 \\ 
+	&  &  & (0.090) & (0.180) \\ 
+	Constant &  & 0.859 &  & 0.763 \\ 
+	&  & (1.002) &  & (1.012) \\ 
+	N & \multicolumn{1}{c}{480} & \multicolumn{1}{c}{458} & \multicolumn{1}{c}{480} & \multicolumn{1}{c}{458} \\ 
+	Log Likelihood &  & \multicolumn{1}{c}{-133.086} &  & \multicolumn{1}{c}{-132.182} \\ 
+	AIC &  & \multicolumn{1}{c}{284.171} &  & \multicolumn{1}{c}{284.363} \\ 
+	\hline \\[-1.8ex] 
+	\multicolumn{5}{l}{$^{*}$p $<$ .1; $^{**}$p $<$ .05; $^{***}$p $<$ .01} \\ 
+		\end{tabular} 
 	\end{adjustbox}
 \end{table} 
 
-%%Model 3: Vote ~ recieves aid dummy**partyID + controls
-%%Model 4: Vote ~ count of loans + count of entitlements + county of means + count of universal + party ID + controls
+If my model usefully reflects the world we live in, those who favor the incumbent \textit{a priori} should be more likely to credit the incumbent with the positive experience of aid and, therefore, turnout to vote for him or her. Those who do not favor the incumbent \textit{a priori} may credit the incumbent with the positive experience of aid, but be unwilling to vote for a candidate from a party they do not prefer. Voters engaging in this attributive process, therefore, should be less likely to turnout to vote at all. Across empirical tests, however, these predictions do not hold. In 2004-2007, receiving aid and being Republican are generally associated with higher turnout, but aid-receiving Republicans have a lower estimated likelihood of turnout than Republicans receiving no aid or aid-receiving Democrats.
+
+My theory assumes that all aid is created equally - that is, it always confers a value of 1 when delivered and 0 otherwise. In reality, however, United States aid programs may differ in the amount of benefits they confer onto recipients. Incumbents may deliver aid to constituents in a way that forces potential recipients to incur a cost, such as the income testing for eligibility to receive Medicaid, the supplemental nutrition assistance program (SNAP), or Temporary Aid to Needy Families (TANF). In contrast, consider COVID-19 individual aid, for which individuals did not have to apply. Further, each aid program involves a different application process and some scholars point to these processes as imposing psychological costs on beneficiaries. Soss (1999) and others (Madsen 1986; Mettler and Stonecash 2008) argue that means-testing in particular teaches participants that government is not responsive to them and that participants develop low self-efficacy. Participants carry over this sense of low efficacy to other political processes, including as voting. Because those participating in universal aid programs do not participate in the means-testing feedback loop, it follows that we should not expect this type of aid to decrease the likelihood of voting. Indeed, Mettler and Stonecash (2008) argue that some universal aid programs can actually increase the probability of turning out to vote.
+
+\section{Self-Efficacy}
+We can incorporate diminished self-efficacy, administrative burden, and other costs into the model by allowing the value of $y_t$ to vary continuously between $[0,1]$. When the incumbent delivers one unit of aid, regardless of his type, we can write this aid amount as $1 – \delta$, where $\delta \epsilon [0,1]$ and represents the cost potential aid recipients must incur to obtain aid. There may be no cost to participants to obtain aid $(\delta = 0)$; alternatively, the cost of obtaining aid may negate any potential benefit $(\delta = 1)$. Thus, the voter’s expected utility is given by $U_{V}^t = -|x_o - x_V| + [y_t - \delta]$ When $(\delta = 0)$, the expanded model is identical to the original. When $(\delta > 0)$, however, $\delta$ impedes the ability of aid to offset the cost of voting for the incumbent. For simplicity, I represent $y_t - \delta$ as  $\lambda_t$. Now, not only is incumbent type determined exogenously, but so is the value of aid.
+
+In the real world, politicians have some control over the types of aid they distribute. However, often, the need for aid, and the need for a certain kind of aid, is determined by apolitical circumstances, such as a hurricane, a stock market crash, or a pandemic. FEMA aid, with its relatively low administrative costs to recipients, cannot be delivered following a stock market collapse, but unemployment benefits can. Unemployment benefits, however, may come at a higher cost to participant's self-efficacy.
+
+
+%%important model bits
+
+Is self-efficacy an appropriate interpretation of $\lambda < 1$? In other words, does interpreting the variance of aid as the total value of aid $-$ its impact on self-efficacy correspond to what we observe in the real world? To test whether depleted self-efficacy is a mechanism by which aid becomes less effective at boosting turnout, I regress a variety of measures of aid on self-reported self-efficacy. If means-testing diminishes self-efficacy and universal aid enhances it, as previous literature asserts, we should expect a negative coefficient on the count of means-tested aid and a positive coefficient on the count of universal aid. To be as thorough as possible, I estimate seven models using a variety of different measures of aid, including a count of each type of aid a respondent receives, the count of the total number of aid programs from which they benefit, and a dichotomous measure of receiving (1) or not receiving (0) aid.
+
+%%hypotheses
+%Self-efficacy - 0 if low, 1 if high
+My dependent variable here is self efficacy. The Maxwell Poll asks respondents, ``Do you agree or disagree with this statement: `People like me don’t have much say about what government does'?" Agree is coded as 0, indicating low self efficacy, while disagree is coded as 1, indicating high self efficacy.
+
 \begin{table}[!htbp] \centering 
-
-	\caption{Table 3} 
-	\label{} 
+	\caption{Table 2} 
+	\label{}
 	\begin{adjustbox}{width=1\textwidth}
-	\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
-		\\[-1.8ex]\hline \\[-1.8ex] 
-		\\[-1.8ex] & \multicolumn{1}{c}{Vote Frequency Dummy} & \multicolumn{1}{c}{Vote Frequency (1-4)} & \multicolumn{1}{c}{Vote Frequency Dummy} & \multicolumn{1}{c}{Vote Frequency (1-4)} \\ 
-		\\[-1.8ex] & \multicolumn{1}{c}{Binomial Logit} & \multicolumn{1}{c}{Ordered Logit} & \multicolumn{1}{c}{Binomial Logit} & \multicolumn{1}{c}{Ordered Logit} \\ 
-		\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)}\\ 
-		\hline \\[-1.8ex] 
-		Aid Dummy & 2.755^{***} & 1.058^{*} &  &  \\ 
-		& (0.819) & (0.619) &  &  \\ 
-		Count: Loans &  &  & 0.744^{*} & -0.117 \\ 
-		&  &  & (0.446) & (0.220) \\ 
-		Count: Universal Aid &  &  & 0.488 & 0.212 \\ 
-		&  &  & (0.374) & (0.193) \\ 
-		Count: Entitlements &  &  & 0.319 & 0.138 \\ 
-		&  &  & (0.232) & (0.115) \\ 
-		Count: Means-Tested Aid &  &  & -0.049 & -0.101 \\ 
-		&  &  & (0.149) & (0.080) \\ 
-		Party ID & 16.727 & 1.323 & 0.291 & -0.007 \\ 
-		& (819.837) & (0.955) & (0.393) & (0.213) \\ 
-		White & -0.016 & 0.070 & 0.356 & 0.092 \\ 
-		& (0.428) & (0.250) & (0.415) & (0.244) \\ 
-		Education & -0.004 & -0.052 & 0.042 & 0.013 \\ 
-		& (0.181) & (0.099) & (0.186) & (0.104) \\ 
-		Female & -0.222 & -0.264 & 0.131 & -0.118 \\ 
-		& (0.372) & (0.212) & (0.374) & (0.217) \\ 
-		Follow Public Affairs & -0.577^{***} & -0.764^{***} & -0.574^{***} & -0.772^{***} \\ 
-		& (0.179) & (0.120) & (0.182) & (0.120) \\ 
-		Trust of Gov. & 0.510 & 0.351^{*} & 0.738^{**} & 0.325 \\ 
-		& (0.371) & (0.211) & (0.374) & (0.215) \\ 
-		Self-Efficacy & 1.342^{***} & 0.183 & 1.153^{***} & 0.139 \\ 
-		& (0.398) & (0.218) & (0.381) & (0.219) \\ 
-		Aid Dummy X Party ID & -16.630 & -1.362 &  &  \\ 
-		& (819.837) & (0.983) &  &  \\ 
-		Constant & -1.860 &  & -0.422 &  \\ 
-		& (1.359) &  & (1.223) &  \\ 
-		N & \multicolumn{1}{c}{458} & \multicolumn{1}{c}{480} & \multicolumn{1}{c}{458} & \multicolumn{1}{c}{480} \\ 
-		Log Likelihood & \multicolumn{1}{c}{-128.697} &  & \multicolumn{1}{c}{-130.974} &  \\ 
-		AIC & \multicolumn{1}{c}{277.395} &  & \multicolumn{1}{c}{285.949} &  \\ 
-		\hline \\[-1.8ex] 
-		\multicolumn{5}{l}{$^{*}$p $<$ .1; $^{**}$p $<$ .05; $^{***}$p $<$ .01} \\ 
-	\end{tabular} 
-	\end{adjustbox}
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
+	\\[-1.8ex]\hline \\[-1.8ex] 
+	\\[-1.8ex] & \multicolumn{7}{c}{PEOPSAY} \\ 
+	\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)} & \multicolumn{1}{c}{(6)} & \multicolumn{1}{c}{(7)}\\ 
+	\hline \\[-1.8ex] 
+	aid\_dummy & -0.396^{***} & -0.464^{***} &  &  &  &  &  \\ 
+	& (0.133) & (0.157) &  &  &  &  &  \\ 
+	Total &  &  & -0.019^{*} &  &  &  &  \\ 
+	&  &  & (0.010) &  &  &  &  \\ 
+	total\_uni &  &  &  & -0.096^{***} &  &  &  \\ 
+	&  &  &  & (0.032) &  &  &  \\ 
+	total\_loans &  &  &  &  & 0.056 &  &  \\ 
+	&  &  &  &  & (0.047) &  &  \\ 
+	total\_ent &  &  &  &  &  & -0.017 &  \\ 
+	&  &  &  &  &  & (0.022) &  \\ 
+	total\_means &  &  &  &  &  &  & -0.029^{**} \\ 
+	&  &  &  &  &  &  & (0.015) \\ 
+	PTYIDd & 0.147^{***} & -0.065 & 0.152^{***} & 0.154^{***} & 0.150^{***} & 0.153^{***} & 0.145^{***} \\ 
+	& (0.045) & (0.261) & (0.046) & (0.045) & (0.046) & (0.046) & (0.046) \\ 
+	white & 0.075 & 0.074 & 0.037 & 0.016 & 0.041 & 0.031 & 0.022 \\ 
+	& (0.055) & (0.056) & (0.054) & (0.054) & (0.055) & (0.054) & (0.054) \\ 
+	EDUC & 0.030 & 0.032 & 0.031 & 0.030 & 0.018 & 0.025 & 0.031 \\ 
+	& (0.021) & (0.021) & (0.021) & (0.021) & (0.022) & (0.021) & (0.021) \\ 
+	sex & 0.137^{***} & 0.139^{***} & 0.127^{***} & 0.117^{***} & 0.133^{***} & 0.124^{***} & 0.139^{***} \\ 
+	& (0.045) & (0.045) & (0.045) & (0.045) & (0.045) & (0.046) & (0.045) \\ 
+	FOLLOWPA & -0.071^{***} & -0.069^{**} & -0.059^{**} & -0.053^{**} & -0.052^{*} & -0.057^{**} & -0.055^{**} \\ 
+	& (0.027) & (0.028) & (0.027) & (0.027) & (0.027) & (0.027) & (0.027) \\ 
+	TRUSTOFF & -0.147^{***} & -0.143^{***} & -0.154^{***} & -0.133^{***} & -0.141^{***} & -0.149^{***} & -0.154^{***} \\ 
+	& (0.045) & (0.045) & (0.045) & (0.045) & (0.045) & (0.045) & (0.045) \\ 
+	aid\_dummy:PTYIDd &  & 0.219 &  &  &  &  &  \\ 
+	&  & (0.266) &  &  &  &  &  \\ 
+	Constant & 1.076^{***} & 1.127^{***} & 0.784^{***} & 0.738^{***} & 0.688^{***} & 0.734^{***} & 0.763^{***} \\ 
+	& (0.172) & (0.183) & (0.127) & (0.121) & (0.123) & (0.125) & (0.124) \\ 
+	N & \multicolumn{1}{c}{458} & \multicolumn{1}{c}{458} & \multicolumn{1}{c}{458} & \multicolumn{1}{c}{458} & \multicolumn{1}{c}{458} & \multicolumn{1}{c}{458} & \multicolumn{1}{c}{458} \\ 
+	R$^{2}$ & \multicolumn{1}{c}{0.094} & \multicolumn{1}{c}{0.095} & \multicolumn{1}{c}{0.083} & \multicolumn{1}{c}{0.093} & \multicolumn{1}{c}{0.079} & \multicolumn{1}{c}{0.077} & \multicolumn{1}{c}{0.084} \\ 
+	Adjusted R$^{2}$ & \multicolumn{1}{c}{0.079} & \multicolumn{1}{c}{0.079} & \multicolumn{1}{c}{0.069} & \multicolumn{1}{c}{0.079} & \multicolumn{1}{c}{0.064} & \multicolumn{1}{c}{0.063} & \multicolumn{1}{c}{0.069} \\ 
+	Residual Std. Error & \multicolumn{1}{c}{0.479 (df = 450)} & \multicolumn{1}{c}{0.479 (df = 449)} & \multicolumn{1}{c}{0.481 (df = 450)} & \multicolumn{1}{c}{0.479 (df = 450)} & \multicolumn{1}{c}{0.482 (df = 450)} & \multicolumn{1}{c}{0.483 (df = 450)} & \multicolumn{1}{c}{0.481 (df = 450)} \\ 
+	F Statistic & \multicolumn{1}{c}{6.638$^{***}$ (df = 7; 450)} & \multicolumn{1}{c}{5.889$^{***}$ (df = 8; 449)} & \multicolumn{1}{c}{5.845$^{***}$ (df = 7; 450)} & \multicolumn{1}{c}{6.618$^{***}$ (df = 7; 450)} & \multicolumn{1}{c}{5.484$^{***}$ (df = 7; 450)} & \multicolumn{1}{c}{5.364$^{***}$ (df = 7; 450)} & \multicolumn{1}{c}{5.874$^{***}$ (df = 7; 450)} \\ 
+	\hline \\[-1.8ex] 
+	\multicolumn{8}{l}{$^{*}$p $<$ .1; $^{**}$p $<$ .05; $^{***}$p $<$ .01} \\ 
+\end{tabular} 
+\end{adjustbox}
 \end{table} 
 
-%expanded model
-%%test of means testing on self-efficacy
+Across models, the coefficient on aid is negatively signed, excepting the count of loans which is positively signed but insignificant. Importantly, the coefficient on \textit{both} universal and means-tested aid is negative, indicating that both aid types decrease self-efficacy, holding all else constant at 0. Furthermore, when standardized, the magnitude of the coefficient on universal aid is larger than on means-tested aid, implying that receiving universal aid has a greater impact on the likelihood of self-efficacy equaling 0 than receiving means-tested aid.
 
 %\section{Discussion}
-%\section{Conclusion}
-
-
-
 
 \end{document}

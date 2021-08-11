@@ -244,7 +244,7 @@ stargazer(hilo2, ord2,
           title="Weighted Models 1-3", type="latex", style = "apsr",
           align=TRUE, out="Tables/weighted_1.tex")
 
-stargazer(hilo3, ord3, hilo4, ord4,
+stargazer(hilo3, ord3,
           title="Weighted Models 1-3", type="latex", style = "apsr",
           align=TRUE, out="Tables/weighted_2.tex")
 
