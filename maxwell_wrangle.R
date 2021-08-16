@@ -352,7 +352,7 @@ table(a$Total,max$VOTE_F)
 #count total means tested
 a <- a %>%
   mutate(total_means = select(., FDSTMPd, MEDAIDd, WELFAREd,
-                              EITCd, UNEMPLOYd, PUBHOUd, WICd, HEADd,
+                              EITCd, PUBHOUd, WICd, HEADd,
                               COLLGRNTd, MTGDEDTd) %>% 
            rowSums(na.rm=TRUE))
 summary(a$total_means)
