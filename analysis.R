@@ -248,10 +248,18 @@ stargazer(hilo3, ord3,
           title="Weighted Models 1-3", type="latex", style = "apsr",
           align=TRUE, out="Tables/weighted_2.tex")
 
-stargazer(ord5, ord6, ord7, ord8,
-          title="Weighted Models 7-8", type="latex", style = "apsr",
-          align=TRUE, out="Tables/weighted_3.tex")
-
 stargazer(ord9, hilo9, ord10, hilo10,
           title="test", type="latex", style = "apsr",
           align=TRUE, out="Tables/weighted_4.tex")
+
+stargazer(ols_wt_2,
+          title="Weighted Models 1-3", type="latex", style = "apsr",
+          align=TRUE, out="Tables/robust_1.tex")
+
+stargazer(ols_wt_3,
+          title="Weighted Models 1-3", type="latex", style = "apsr",
+          align=TRUE, out="Tables/robust_2.tex")
+
+stargazer(ols_wt_9, ols_wt_10,
+          title="test", type="latex", style = "apsr",
+          align=TRUE, out="Tables/robust_4.tex")
