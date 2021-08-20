@@ -197,15 +197,16 @@ where $\theta_j$ is the opposite of the office holder’s type. Incumbent types 
 
 \textbf{Lemma 2:}  After observing the Incumbent’s choice of $y_1 \epsilon {0,1}$ during the first period, the Voter V’s updated belief about the Incumbent’s type is: 
 \begin{gather}
-p_(\theta_I) (p(\theta_i ) + (1 - p)(\theta_j ) | y_1 )=y_1.
+p_{(\theta_I)}(p(\theta_i ) + (1 - p)(\theta_j ) | y_1 )=y_1(p)
 \end{gather}
 
-Given Lemma 2, V expects to receive $E(y_2 | e=I)=p(\theta_i )+(1-p)(\theta_j)$ units of aid in $t=2$ if I is reelected and $E(y_2 |e=C)=E(\theta_C )=\frac{1}{2}$ units of aid if C wins the election.  V’s expected second period payoff from I’s reelection would be: $EU_V (e=I) = -(1 - x_v ) + [p(y_1 ) + (1 - p)(y_1 )]$ whereas his expected second period payoff from C’s election would be: $EU_V (e=C) = - x_V + \frac{1}{2}$. Therefore, conditional on turning out, V votes for I iff: 
+Given Lemma 2, V expects to receive $E(y_2 | e=I) = p(\theta_i )+(1-p)(\theta_j)$ units of aid in $t=2$ if I is reelected and $E(y_2 |e=C)=E(\theta_C )=\frac{1}{2}$ units of aid if C wins the election.  V’s expected second period payoff from I’s reelection would be: $EU_V (e=I) = -(1 - x_v ) + [p(y_1 ) + (1 - p)(y_1 )]$ whereas his expected second period payoff from C’s election would be: $EU_V (e=C) = - x_V + \frac{1}{2}$. 
+
+Therefore, conditional on turning out, V votes for I iff: 
 \begin{gather}
 EU_V (e=I) \geq EU_V (e=C) \Rightarrow = -(1 - x_V ) + [p(y_1 ) + (1 - p)(y_{-1} )] \geq - x_V + \frac{1}{2} \Rightarrow \\
 x_V \geq -\frac{3 - 2py_1 - 2y_{-1} - 2py_{-1}}{4}
 \end{gather}
-
 
 When $x_V$ is above the threshold, V prefers that the Incumbent win the election, so V’s total expected payoff from voting would be:
 \begin{gather}
@@ -217,9 +218,9 @@ When $x_V$ is below the threshold, V prefers that the Challenger win the electio
  EU_V (v=1 | x_V < -\frac{3 - 2py_1 - 2y_{-1} - 2py_{-1}}{4} = -x_V + \frac{1}{2} - c
 \end{gather}
 
-In both cases, V’s total combined expected payoff from not voting is:
+V’s total combined expected payoff from not voting is:
 \begin{gather}
-EU_V (v=0) = \frac{EU_V (e=I)}{2} + \frac{EU_V (e=C)}{2} + \frac{- (1 - x_V ) + y_1}{2} + \frac{-x_V + \frac{1}{2}}{2} = \frac{y_1}{2} - \frac{1}{4}
+EU_V (v=0) = \frac{EU_V (e=I)}{2} + \frac{EU_V (e=C)}{2} = \frac{- (1 - x_V ) + y_1}{2} + \frac{-x_V + \frac{1}{2}}{2} = \frac{y_1}{2} - \frac{1}{4}
 \end{gather}
 
 Hence, in equilibrium, V turns out to vote iff: $EU_V (v=1) \geq EU_V (v=0) \Rightarrow c \leq \bar{c}$ where:

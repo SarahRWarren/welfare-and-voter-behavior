@@ -4,6 +4,8 @@ library(survey)
 library(stargazer)
 library(ggpubr)
 library(MASS)
+library(sjPlot)
+
 
 max_sub <- read_csv("Data/max_sub.csv")
 
@@ -147,25 +149,26 @@ hilo2 <- glm(VOTE_D ~ PTYIDd +
 hilo3 <- glm(VOTE_D ~ aid_dummy + PTYIDd + aid_dummy*PTYIDd + white + EDUC + sex + 
                  FOLLOWPA + TRUSTOFF + PEOPSAY,
                weights = allwt, data =  rob1, family="binomial")
+
 #Model 4: Vote ~ count of loans + count of entitlements + county of means + 
 #count of universal + party ID + controls
 hilo4 <- glm(VOTE_D ~ total_loans + total_uni + total_ent + total_means + PTYIDd + 
                  white + EDUC + sex + FOLLOWPA + TRUSTOFF + PEOPSAY,
                weights = allwt, data =  rob1, family="binomial")
 #Model 5: Vote ~ controls + count of loans**party ID
-hilo5 <- glm(VOTE_D ~ total_loans + total_uni + total_ent + total_means + PTYIDd + total_loans*PTYIDd +
+hilo5 <- glm(VOTE_D ~ total_loans  + PTYIDd + total_loans*PTYIDd +
                  white + EDUC + sex + FOLLOWPA + TRUSTOFF + PEOPSAY,
                weights = allwt, data =  rob1, family="binomial")
 #Model 6: Vote ~ controls + count of entitlements**party ID
-hilo6 <- glm(VOTE_D ~ total_loans + total_uni + total_ent + total_means + PTYIDd + total_ent*PTYIDd +
+hilo6 <- glm(VOTE_D ~ total_ent + PTYIDd + total_ent*PTYIDd +
                  white + EDUC + sex + FOLLOWPA + TRUSTOFF + PEOPSAY,
             weights = allwt, data =  rob1, family="binomial")
 #Model 7: Vote ~ controls + count of universal**party ID
-hilo7 <- glm(VOTE_D ~ total_loans + total_uni + total_ent + total_means + PTYIDd + total_uni*PTYIDd +
+hilo7 <- glm(VOTE_D ~  total_uni + PTYIDd + total_uni*PTYIDd +
                  white + EDUC + sex + FOLLOWPA + TRUSTOFF + PEOPSAY,
                weights = allwt, data =  rob1, family="binomial")
 #Model 8: Vote ~ controls + count of means**party ID
-hilo8 <- glm(VOTE_D ~ total_loans + total_uni + total_ent + total_means + PTYIDd + total_means*PTYIDd +
+hilo8 <- glm(VOTE_D ~ total_means + PTYIDd + total_means*PTYIDd +
                  white + EDUC + sex + FOLLOWPA + TRUSTOFF + PEOPSAY,
                weights = allwt, data =  rob1, family="binomial")
 
@@ -177,7 +180,10 @@ hilo10 <- glm(VOTE_D ~ Total + PTYIDd + Total*PTYIDd + white + EDUC + sex +
                   FOLLOWPA + TRUSTOFF + PEOPSAY,
               weights = allwt, data =  rob1, family="binomial")
 
+theme_set(theme_sjplot())
 
+plot_model(hilo10, type = "pred", terms = c("Total", "PTYIDd"))
+plot_model(hilo3, type = "pred", terms = c("aid_dummy", "PTYIDd"))
 
 ##ROBUST TO ORDINAL LOGIT
 max_sub$VOTE = factor(max_sub$VOTE, levels = c("1", "2", "3", "4", "5"), 
@@ -263,3 +269,13 @@ stargazer(ols_wt_3,
 stargazer(ols_wt_9, ols_wt_10,
           title="test", type="latex", style = "apsr",
           align=TRUE, out="Tables/robust_4.tex")
+
+stargazer(ord4, ord5, ord6, ord7, ord8,
+          title="Weighted Models 1-3", type="latex", style = "apsr",
+          align=TRUE, out="Tables/weighted_5.tex")
+
+stargazer(hilo4, hilo5, hilo6, hilo7, hilo8,
+          title="Weighted Models 1-3", type="latex", style = "apsr",
+          align=TRUE, out="Tables/weighted_6.tex")
+
+plot_model(hilo6, type = "pred", terms = c("total_ent", "PTYIDd"))
