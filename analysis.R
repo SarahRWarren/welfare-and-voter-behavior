@@ -272,6 +272,7 @@ stargazer(ols_wt_9, ols_wt_10,
 
 stargazer(ord4, ord5, ord6, ord7, ord8,
           title="Weighted Models 1-3", type="latex", style = "apsr",
+          keep.stat = c("ll", "aic"),
           align=TRUE, out="Tables/weighted_5.tex")
 
 stargazer(hilo4, hilo5, hilo6, hilo7, hilo8,
