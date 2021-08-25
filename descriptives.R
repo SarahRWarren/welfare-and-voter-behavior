@@ -51,3 +51,9 @@ our_summary1 <-
 
 whole <- summary_table(max, our_summary1)
 whole
+
+u <- ggplot(max, aes(x=total_uni, y=PEOPSAY)) + geom_point() + geom_jitter() +
+  coord_flip() + theme_minimal()
+
+m <- ggplot(max, aes(x=total_means, y=PEOPSAY)) + geom_point() + geom_jitter() +
+  coord_flip() + theme_minimal()
