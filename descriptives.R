@@ -1,5 +1,6 @@
 library(tidyverse)
 library(qwraps2)
+library(gridExtra)
 
 
 max <- read_csv("Data/max_sub.csv")
@@ -53,7 +54,41 @@ whole <- summary_table(max, our_summary1)
 whole
 
 u <- ggplot(max, aes(x=total_uni, y=PEOPSAY)) + geom_point() + geom_jitter() +
-  coord_flip() + theme_minimal()
+  coord_flip() + theme_minimal() +
+  xlim(0, 8) + scale_y_continuous(breaks=c(0,1)) +
+  labs(title = "Universal Aid",
+       x = "Total Programs",
+       y = "")
 
 m <- ggplot(max, aes(x=total_means, y=PEOPSAY)) + geom_point() + geom_jitter() +
-  coord_flip() + theme_minimal()
+  coord_flip() + theme_minimal() +
+  xlim(0, 8) + scale_y_continuous(breaks=c(0,1)) +
+  labs(title = "Means Tested Aid",
+       x = "",
+       y = "")
+
+
+e <- ggplot(max, aes(x=total_ent, y=PEOPSAY)) + geom_point() + geom_jitter() +
+  coord_flip() + theme_minimal() +
+  xlim(0, 8) + scale_y_continuous(breaks=c(0,1)) +
+  labs(title = "Entitlements",
+       x = "Total Programs",
+       y = "Self Efficacy")
+
+l <- ggplot(max, aes(x=total_loans, y=PEOPSAY)) + geom_point() + geom_jitter() +
+  coord_flip() + theme_minimal() +
+  xlim(0, 8) + scale_y_continuous(breaks=c(0,1)) +
+  labs(title = "Loan Aid",
+       x = "",
+       y = "Self Efficacy")
+
+a <- grid.arrange(u, m, e, l)
+ggsave("Figs/scatter_SE.png", plot = a)
+
+summary(max$INCOME)
+
+ggplot(max, aes(x=aid_dummy, y=INCOME)) + geom_point() + geom_jitter() +
+  theme_minimal() +
+  labs(title = "Relationship Between Income and Aid",
+       x = "Income (7pt Scale)",
+       y = "Aid (Dummy)")
