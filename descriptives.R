@@ -90,5 +90,29 @@ summary(max$INCOME)
 ggplot(max, aes(x=aid_dummy, y=INCOME)) + geom_point() + geom_jitter() +
   theme_minimal() +
   labs(title = "Relationship Between Income and Aid",
-       x = "Income (7pt Scale)",
-       y = "Aid (Dummy)")
+       y = "Income (7pt Scale)",
+       x = "Aid (Dummy)")
+ggsave("Figs/aid-and-income.png")
+
+a <- ggplot(max, aes(x=PEOPSAY, y=..density..)) + 
+  geom_histogram() + theme_minimal() + facet_grid(vars(DISABITYd)) +
+  scale_x_continuous(breaks=c(0,1)) +
+  labs(title = "SSDI and Self-Efficacy",
+       y = "Density",
+       x = "Self Efficacy")
+
+b <- ggplot(max, aes(x=PEOPSAY, y=..density..)) + 
+  geom_histogram() + theme_minimal() + facet_grid(vars(WRKCOMPd)) +
+  scale_x_continuous(breaks=c(0,1)) +
+  labs(title = "Worker's Comp. and Self-Efficacy",
+       y = "Density",
+       x = "Self Efficacy")
+
+c<- ggplot(max, aes(x=PEOPSAY, y=..density..)) + 
+  geom_histogram() + theme_minimal() + facet_grid(vars(UNEMPLOYd)) +
+  scale_x_continuous(breaks=c(0,1)) +
+  labs(title = "Unemployment Insurance and Self-Efficacy",
+       y = "Density",
+       x = "Self Efficacy")
+q <- grid.arrange(a,b,c)
+ggsave("Figs/uni_SE.png", plot = q, width = 5, height=6)

@@ -279,4 +279,6 @@ stargazer(hilo4, hilo5, hilo6, hilo7, hilo8,
           title="Weighted Models 1-3", type="latex", style = "apsr",
           align=TRUE, out="Tables/weighted_6.tex")
 
-plot_model(hilo6, type = "pred", terms = c("total_ent", "PTYIDd"))
+m <- plot_model(hilo6, type = "pred", terms = c("total_ent", "PTYIDd"),
+                colors = c("#0000FF", "#FF0000"))
+ggsave("Figs/marginal.png", plot = m)       
