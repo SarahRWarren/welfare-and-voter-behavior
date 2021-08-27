@@ -263,8 +263,12 @@ stargazer(ols_wt_2,
           align=TRUE, out="Tables/robust_1.tex")
 
 stargazer(ols_wt_3,
-          title="Weighted Models 1-3", type="latex", style = "apsr",
+          title="OLS Models", type="latex", style = "apsr",
           align=TRUE, out="Tables/robust_2.tex")
+
+stargazer(ols_wt_5, ols_wt_6, ols_wt_7, ols_wt_8,
+          title="OLS Models", type="latex", style = "apsr",
+          align=TRUE, out="Tables/robust_3.tex")
 
 stargazer(ols_wt_9, ols_wt_10,
           title="test", type="latex", style = "apsr",
