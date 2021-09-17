@@ -298,15 +298,17 @@ I present the formalized model in Appendix A. For brevity, I discuss only its in
 \textit{$H_4$: For a right-wing voter $(x_V > \frac{1}{2})$, those participating in aid with low administrative costs will be more likely to turnout to vote than those participating in aid with high administrative costs.}
 
 \section{Research Design}
-To test the implications of my model, I use data from the Maxwell Poll on Citizenship and Inequality from Syracuse University, directed by Jeffery Stonecash. The poll includes data on federal aid status, voter behavior, and civic engagement. The poll is nation-wide annual survey and was administered by phone from 2004-2007. The cumulative data file from the surveys contain weights so that the data is nationally representative and each year averages approximately 600 respondents. I conduct my analysis using binary and ordered logit models, but my results are robust to OLS estimation (see Appendix B). My dependent variable is turnout. The Maxwell Poll asks respondents whether they turnout Always (4), Often (3), Sometimes (2), or Not at all (1). I use this ordinal measure of turnout as well as a binary measure in which I code those who respond ``Always" and ``Often" as 1 and those who responded ``Sometimes" and ``Never" as 0.
+To test the implications of my model, I use data from the Maxwell Poll on Citizenship and Inequality from Syracuse University, directed by Jeffery Stonecash. I choose these data specifically because the Maxwell Poll contains data on federal aid status across nineteen different programs, partisanship, voter behavior, and civic engagement. The poll is nation-wide annual survey and was administered by phone from 2004-2007. The cumulative data file from the surveys contain weights so that the data is nationally representative and each year averages approximately 600 respondents. I conduct my analysis using binary and ordered logit models, but my results are robust to OLS estimation (see Appendix B). 
 
-My primary independent variable is receiving government aid. I employ three measures of aid across different models to account for heterogeneity within aid programs and account for the cumulative effect of aid on voter behavior. First, I create a binary variable in which 1 means the respondent or a member of the respondent’s household receives any form of government assistance and a 0 means no one in the household receives government assistance. Second, I use my novel measure of aid-types that I introduced in Section 2: the counts of the total number of entitlement, means-tested, universal, and subsidized loan aid the household receives. A 0 in all four categories would mean the respondent’s household receives no aid. This allows me to test $H_3$ and $H_4$, since in general loans and means tested aid have a more strenuous application process, while entitlements and universal aid programs are, on average, easier to enroll in. Finally, I measure aid continuously as the count of total aid programs in which a person participates. Descriptive statistics for my key variables can be found in Appendix B.
+My dependent variable is \textit{turnout}. The Maxwell Poll asks respondents whether they turnout Always (4), Often (3), Sometimes (2), or Not at all (1). I use this ordinal measure of turnout as well as a binary measure in which I code those who respond ``Always" and ``Often" as 1 and those who responded ``Sometimes" and ``Never" as 0. This measure is a suboptimal operationalization of my theoretical concept, turnout. Ideally, participants would answer the question, "Did you turnout to vote in the last Presidential election?" and, conditional on answering yes, "Who did you vote for?" However, the Maxwell Poll only asks respondents about their general turnout history, which may include local and state-level elections, not just Presidential elections.
 
-For Party ID, I use a binary measure in which a 1 is Republican and a 0 is Democrat. I also include a battery of controls in each model, including race, income, education, sex, how closely the person follows public events, their trust in public officials, and their sense of their self efficacy.
+My primary independent variable is \textit{receiving government aid.} I employ three measures of aid across different models to account for heterogeneity within aid programs and account for the cumulative effect of aid on voter behavior. First, I create a binary variable in which 1 means the respondent or a member of the respondent’s household receives any form of government aid and a 0 means no one in the household receives government aid. Second, I use my novel measure of aid-types that I introduced in Section 2: the counts of the total number of entitlement, means-tested, universal, and subsidized loan aid the household receives. A 0 in all four categories would mean the respondent’s household receives no aid. This allows me to test $H_3$ and $H_4$, since in general loans and means tested aid have a more strenuous application process, while entitlements and universal aid programs are, on average, easier to enroll in. Finally, I measure aid continuously as the count of total aid programs in which a person participates. Descriptive statistics for my key variables can be found in Appendix B.
+
+My second primary independent variable is \textit{Party ID}. I use a binary measure in which a 1 is Republican and a 0 is Democrat. I also include a battery of controls in each model, including race, income, education, sex, how closely the person follows public events, their trust in public officials, and their sense of their self efficacy.
 
 \section{Analysis}
 
-Recall $H_1$ and $H_2$ assert that receiving aid \textit{and} party ID cause a change in turnout. Since the incumbent president during the time of the survey is George W. Bush (R), I predict that Republicans who receive aid will be more likely to turnout than Democratic voters who receive aid. To test my hypotheses, I first use the dummy variable for aid, which takes on a value of 1 if the respondent benefits from any of the federal aid programs asked about in the survey and 0 otherwise. Using this as my primary independent variable, I estimate a model that interacts Party ID and the Aid Dummy. The results of both the binary and ordered logit for both models are shown in Table 3.
+Recall $H_1$ and $H_2$ assert that the interaction of aid and party ID cause a change in turnout. Since the incumbent president during the time of the survey is George W. Bush (R), I predict that Republicans who receive aid will be more likely to turnout than Democratic voters who receive aid. To test my hypotheses, I first use the dummy variable for aid, which takes on a value of 1 if the respondent benefits from any of the federal aid programs asked about in the survey and 0 otherwise. Using this as my primary independent variable, I estimate a model that interacts Party ID and the Aid Dummy. The results of both the binary and ordered logit for both models are shown in Table 3.
 
 %%Model 3: Vote ~ recieves aid dummy**partyID + controls
 \begin{table}[!htbp] \centering 
@@ -331,7 +333,6 @@ AIC & \multicolumn{1}{c}{277.395} &  \\
 \multicolumn{3}{l}{$^{*}$p $<$ .1; $^{**}$p $<$ .05; $^{***}$p $<$ .01} \\
 \multicolumn{3}{l}{Standard errors are given in parentheses.} \\
 \multicolumn{3}{c}{All models include controls for sex, education, income, race, self efficacy, following public affairs, and trust in government.}   
-
 \end{tabular}
 \end{adjustbox}
 \caption{Aid and Party ID} 
@@ -342,10 +343,8 @@ The aid dummy and Republican are positively signed, as predicted in $H1$ and $H2
 
 I also measure aid continuously as the count of total aid programs in which a person participates. I interact this total aid measure on party ID in Table 4. As before, the measures of aid and Republican are signed as predicted, but the coefficient on the interaction term is negative. The marginal effect of aid is once again the opposite of what $H_1$ and $H_2$ predict. Again, I do not find support for my hypotheses.
 
-If my model usefully reflects the world we live in, those who favor the incumbent \textit{a priori} should be more likely to credit the incumbent with the positive experience of aid and, therefore, turnout to vote for him or her. Those who do not favor the incumbent \textit{a priori} may credit the incumbent with the positive experience of aid, but be unwilling to vote for a candidate from a party they do not prefer. Voters engaging in this attributive process, therefore, should be less likely to turnout to vote at all. Across empirical tests, however, these predictions do not hold. In 2004-2007, receiving aid and being Republican are generally associated with higher turnout, but aid-receiving Republicans have a lower estimated likelihood of turnout than Republicans receiving no aid or aid-receiving Democrats.
-
 %%Model 9-10 - Total Aid and Total Aid*PID interaction
-\begin{table}[!htbp] \centering 
+\begin{table}[H] \centering 
 	\begin{adjustbox}{width=1\textwidth}
 		\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 			\\[-1.8ex]\hline \\[-1.8ex] 
@@ -373,11 +372,13 @@ If my model usefully reflects the world we live in, those who favor the incumben
 	\label{}
 \end{table} 
 
+If my model usefully reflects the world we live in, those who favor the incumbent \textit{a priori} should be more likely to credit the incumbent with the positive experience of aid and, therefore, turnout to vote for him or her. Those who do not favor the incumbent \textit{a priori} may credit the incumbent with the positive experience of aid, but be unwilling to vote for a candidate from a party they do not prefer. Voters engaging in this attributional process, therefore, should be less likely to turnout to vote at all. Across empirical tests, however, these predictions do not hold. In 2004-2007, receiving aid and being Republican are generally associated with higher turnout, but aid-receiving Republicans have a lower estimated likelihood of turnout than Republicans receiving no aid or aid-receiving Democrats.
+
 This may be due to differences in the costs different aid programs impose on their participants. Some aid programs require detailed income and wealth information, medical and employment histories, monthly interviews, and quarterly reevaluation of eligibility. The costs these programs impose on beneficiaries may diminish the effect of aid on turnout ($H_3$ and $H_4$). In general, government loan programs and means-tested programs impose the highest costs on participants. Entitlements and universal aid programs tend to be easier, on average, for potential beneficiaries to apply for.
 
 In Table 5, I use counts of each of the four types of aid programs as my dependent variables. I predicted that high-cost aid programs, like loans and means-tested aid, would decrease turnout among Republicans and increase aid among Democrats, and that low-cost aid programs, like universal aid and entitlements, would increase turnout among Republicans and decrease aid among Democrats. I find the opposite to be true. Receiving more entitlements are associated with an increase in turnout likelihood in Democrats and associated with a decrease in turnout likelihood among Republicans.
 
-\begin{table}[!htbp] \centering 
+\begin{table}[H] \centering 
 	\begin{adjustbox}{width=1\textwidth}
 \begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} D{.}{.}{-3} } 
 	\\[-1.8ex]\hline \\[-1.8ex] 
@@ -418,6 +419,23 @@ In Table 5, I use counts of each of the four types of aid programs as my depende
 \end{table} 
 
 \section{Discussion}
+Given that none of my empirical tests conform with my predictions, it is worth considering why in greater detail. Below, I consider three main reasons why my empirical results do not align with my predictions, discuss ways to improve these areas, and propose directions for future work.
+
+\subsection{Measurement}
+The Maxwell Poll's turnout variable deviates from my theoretical discussion of turnout in major ways. It captures turnout frequency, not turnout in a specific election. Further, my theory proposes a sequence of events such that the Voter receives aid and immediately then decides whether to turnout and for whom to vote.\footnote{This is in line with Baiker and Finkelstein's (2019) empirical observations in a Medicaid policy experiment.} However, my data range from 2004-2007, meaning that, while G.W. Bush was the incumbent, he was not eligible to run for reelection. Thus, voters found themselves choosing between two new candidates, neither of whom had the opportunity to signal their type in the first stage. It is entirely plausible that voters did not transfer their assessment of Bush's (R) type to then-Presidential candidate John McCain (R). Indeed, my theory implies that they should not - as distributive type is exogenously determined.
+
+In an ideal world, we would be able to ask respondents about their aid status in the fiscal year immediately preceding a Presidential election with an incumbent President. We would also be able to ask them whether they had turned out to vote for President in that election and, if so, for which candidate. If such data were available for the 2020 Presidential election, we would expect Republicans who received aid to be more likely to turn out to vote and, conditional upon turning out, choose to vote for then-incumbent Donald Trump. We would expect Democrats who received aid to be less likely to turn out to vote at all.\footnote{The 2020 case is especially interesting, given the COVID-19 pandemic and distribution of individual, universal aid immediately preceding the election. Given the pandemic, and the polarizing candidacy of Donald J. Trump, it may be an unrepresentative case. However, it is still certainly a case worth examining - and, in fact, circumvents possible selection effects, which I discuss later.}
+
+\subsection{Theory}
+It is also possible that, even with better data, my theory is simply not a useful picture of the world. It may be that politicians \textit{do} behave in equilibrium, but voters do not. Other information might be more salient to voters than receiving aid and this may override any effect aid has on turnout.
+
+It may also be that the institutional structure of aid in the United States allows Incumbents of different parties to target benefits to their 
+
+
+
+\subsection{Selection Effects}
+
+\section{Conclusion}
 Why do aid-receiving voters turn out at such low rates? After examining the evidence, the answer is less clear than previous work suggests. I empirically evaluate the mechanism by which some aid is theorized to depress turnout and find no support for it. However, I also fail to find support for my hypotheses that partisanship determines whether aid depresses or increases turnout likelihood. Despite failing to find support for my hypotheses, this paper makes several valuable contributions to the literature. First, it offers the first empirical test of the self efficacy hypothesis. Secondly, I present a novel categorization method for future scholars studying aid. My method groups aid intuitively, while providing for nuance than the traditional dichotomy. Finally, using my novel measure, I test the effect of aid-type on voter turnout. Counterintuitively, I find that Republicans receiving entitlements are less likely to turnout than Republicans who receive less entitlements, on average.
 
 My work also has three important implications for future work on redistribution and voter behavior in the American context. First, future work would benefit from more suitable data to reevaluate my hypotheses. There is a great need for detailed, individual-level data on aid that is presently only available via a lengthy Freedom of Information Act (FOIA) request process. While the Maxwell Poll has been a valuable resource to scholars, self-reported turnout frequency is a poor approximation of voter turnout. Better data are needed to fully understand the relationship between aid and turnout.
